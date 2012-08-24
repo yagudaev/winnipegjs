@@ -7,4 +7,5 @@ Contributors
 ==========
 
 Design by Vadim Brodsky
+
 Development by Michael Yagudaev
