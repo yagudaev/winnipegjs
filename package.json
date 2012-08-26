@@ -4,7 +4,7 @@
   "engine": {
     node: "0.8.x",
     npm: "1.x.x"
-  }
+  },
   "private": true,
   "scripts": {
     "start": "node app"
