@@ -2,6 +2,7 @@
     font-family: Lobster;
     src: url(/fonts/lobster-1.4.otf);
 }
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -9,6 +10,28 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: none;
+}
+
+.divider {
+    border-top: 1px solid #d0cece;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.announcement {
+    background: #ffe999;
+    border-radius: 5px;
+    padding: 30px 50px;
+    font-size: 21px;
+    font-family: Arial;
+    color: #574d4f;
+    border: 1px solid #969091;
+    text-align: center;
+}
+
+.announcement span
+{
+    font-weight: 700;
 }
 
 a {
@@ -61,11 +84,9 @@ header {
         }
         
 footer {
-    position: absolute;
-    bottom: 0;
+    margin-left: 0;
     padding: 15px 0;
     overflow: auto;
-    width: 100%;
     border-top: 3px solid #969091;
     background: #574d4f;
     color: white;
@@ -119,3 +140,43 @@ footer {
 #main {
     margin: 10px 25px;
 }
+
+    #main.index .logo-wrapper {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    #main.index .logo {
+        font-size: 72pt;
+        font-family: Lobster;
+        color: #ffd952;
+        display: block;
+    }
+    
+    #main.index .tagline {
+        font-size: 18pt;
+        color: #574d4f;
+    }
+    
+    #main.index .announcement {
+        margin-top: 25px;
+    
+        margin-bottom: 20px;
+}
+    
+    #main.index .columns {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 940px;
+        overflow: auto;
+        padding: 0 10px;        
+    }
+        #main.index .columns > div {
+            float: left;
+            width: 300px;
+            margin-left: 20px;
+        }
+        
+        #main.index .columns > div:first-child {
+            margin-left: 0;
+        }
