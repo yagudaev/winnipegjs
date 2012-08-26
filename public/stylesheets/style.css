@@ -77,7 +77,7 @@ header {
             border-radius: 5px;
         }
     
-        header li.active a,
+        header li a.active,
         header li a:hover {
             background-color: rgba(87, 77, 79, 1.0);
             background-color: #574d4f;
@@ -139,6 +139,7 @@ footer {
 
 #main {
     margin: 10px 25px;
+    min-height: 600px;
 }
 
     #main.index .logo-wrapper {

@@ -8,13 +8,13 @@ html
       div#logo (Winnipeg.js);
       ul#nav
         li 
-          a(href="/") Home
+          a(href="/", class= page === 'index' ? 'active' : '') Home
         li
-          a(href="/events") Events
+          a(href="/events", class= page === 'events' ? 'active' : '') Events
         li 
-          a(href="/resources") Resources
+          a(href="/resources", class= page === 'resources' ? 'active' : '') Resources
         li 
-          a(href="/members") Members
+          a(href="/members", class= page === 'members' ? 'active' : '') Members
     div#main(class=page)
       block content
     footer
