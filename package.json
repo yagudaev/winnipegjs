@@ -1,6 +1,10 @@
 {
   "name": "application-name",
   "version": "0.0.1",
+  "engine": {
+    node: "0.8.x",
+    npm: "1.x.x"
+  }
   "private": true,
   "scripts": {
     "start": "node app"
