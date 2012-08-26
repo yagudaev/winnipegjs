@@ -4,4 +4,37 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    header
+      div#logo (Winnipeg.js);
+      ul#nav
+        li 
+          a(href="/") Home
+        li
+          a(href="/events") Events
+        li 
+          a(href="/resources") Resources
+        li 
+          a(href="/members") Members
+    div#main
+      block content
+    footer
+      div
+        div
+          a(href="http://www.linkedin.com/groups/Winnipegjs-4520628?home=&gid=4520628&trk=anet_ug_hm&goback=%2Egmp_4520628")
+            img(src="/images/linkedin-icon.png", alt="Join us on Linkedin", title="Join us on Linkedin")
+          span Join our <a href="http://www.linkedin.com/groups/Winnipegjs-4520628?home=&gid=4520628&trk=anet_ug_hm&goback=%2Egmp_4520628">Group</a> on Linkedin
+        div
+          a(href="http://twitter.com/winnipegjs")
+            img(src="/images/twitter-icon.png", alt="Follow us on Twitter", title="Follow us on Twitter")
+          span Follow @<a href="http://twitter.com/winnipegjs">WinnipegJS</a> on Twitter
+        div
+          a(href="http://github.com/yagudaev/winnipegjs")
+            img(src="/images/github-icon.png", alt="Contribute on Github", title="contribute on Github")
+          span Contribute on <a href="http://github.com/yagudaev/winnipegjs">Github</a>
+      div#copyrights
+        div .
+          Winnipeg.js website developed by
+          <a href="http://www.yagudaev.com">Michael Yagudaev</a>
+        div .
+          Designed by
+          <a href="http://www.vadimbrodsky.com">Vadim Brodsky</a>

@@ -1,8 +1,121 @@
+@font-face {
+    font-family: Lobster;
+    src: url(/fonts/lobster-1.4.otf);
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: white url(/images/bg.jpg) repeat;
+  margin: 0;
+  padding: 0;
+  overflow-y: none;
 }
 
 a {
   color: #00B7FF;
+}
+
+header {
+	background: transparent url(/images/topbar-bg.jpg) repeat;        
+	border-bottom: 3px solid #969091;
+	overflow: auto;
+}
+
+    header #logo {
+        float: left;
+        font-size: 28pt;
+        font-weight: 500;
+        margin: 10px 20px 7px 25px;
+        font-family: Lobster;
+        color: #574d4f;
+    }
+
+    header ul {
+        display: block;
+        list-style: none;
+        float: right;
+        margin-right: 20px;
+    }
+    
+    header li {
+        display: block;
+        margin: 10px 10px;
+        float: left;
+        
+    }
+    
+        header li a {
+            padding: 5px 20px;
+            float: left;
+            background-color: rgba(87, 77, 79, 0.7);
+            color: white;
+            text-decoration: none;
+            display: block;
+            border-radius: 5px;
+        }
+    
+        header li.active a,
+        header li a:hover {
+            background-color: rgba(87, 77, 79, 1.0);
+            background-color: #574d4f;
+        }
+        
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 15px 0;
+    overflow: auto;
+    width: 100%;
+    border-top: 3px solid #969091;
+    background: #574d4f;
+    color: white;
+}
+
+    footer > div {
+        width: 960px;
+        overflow: auto;
+        margin: 0 auto;
+    }
+
+    footer > div > div {
+        float: left;
+        margin-left: 50px;
+    }
+    
+    footer > div > div > span {
+        line-height: 32px;
+    }
+    
+    footer img {
+        width: 32px;
+        height: 32px;
+        display: block;
+        float: left;
+        margin-right: 10px;
+    }
+    
+    footer #copyrights {
+        margin: 10px auto;        
+        width: 365px;
+        font-size: 0.8em;
+        color: #969091;
+        text-align: center;
+    }
+    
+    footer #copyrights a {
+        color: #969091;
+        display: inline;
+        text-align: center;        
+    }
+    
+    footer #copyrights > div {
+        float: none;
+    }
+    
+    footer a {
+        color: white;
+    }
+
+#main {
+    margin: 10px 25px;
 }
