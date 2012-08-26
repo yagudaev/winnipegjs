@@ -71,6 +71,7 @@ header {
         header li a {
             padding: 5px 20px;
             float: left;
+            background-color: rgb(118, 100, 63);
             background-color: rgba(87, 77, 79, 0.7);
             color: white;
             text-decoration: none;
@@ -143,6 +144,10 @@ footer {
     min-height: 600px;
 }
 
+    #main.index {
+        margin-bottom: 25px;
+    }
+    
     #main.index .logo-wrapper {
         text-align: center;
         margin-bottom: 30px;
@@ -161,9 +166,8 @@ footer {
     
     #main.index .announcement {
         margin-top: 25px;
-    
-        margin-bottom: 20px;
-}
+        margin-bottom: 0;
+    }
     
     #main.index .columns {
         margin-top: 30px;
