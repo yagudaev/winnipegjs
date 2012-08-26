@@ -1,6 +1,7 @@
 @font-face {
     font-family: Lobster;
-    src: url(/fonts/lobster-1.4.otf);
+    src: url('/fonts/lobster-1.4.eot'); /* for IE */
+    src: local('lobster'), url('/fonts/lobster-1.4.ttf') format('truetype'); /* for real browsers */
 }
 
 body {
