@@ -34,13 +34,22 @@ time {
     text-align: center;
 }
 
-.announcement span
-{
-    font-weight: 700;
-}
+    .announcement span
+    {
+        font-weight: 700;
+    }
+    
+    .announcement a {
+        color: black;
+    }
 
 a {
   color: #00B7FF;
+}
+
+h1 a,
+h2 a {
+    color: black;
 }
 
 header {

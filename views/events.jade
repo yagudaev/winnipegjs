@@ -3,9 +3,11 @@ extends layout
 block content
   h1 #{title}
   
-  h2 First Meetup: Intro to Node.js
-  time(datetime="2012-09-26 18:00") Wednesday, September 26, 2012 @ UofM Smart Park
-  img(src="/images/nodejs-logo.jpg")
+  h2 
+    a(href="/events/sep-26-2012") First Meetup: Intro to Node.js
+  time(datetime="2012-09-26 18:00") 6pm Wednesday, September 26, 2012 @ UofM Smart Park
+  a(href="/events/sep-26-2012")
+    img(src="/images/nodejs-logo.jpg")
   p .
     We decided to do our first meeting about one of the hottest topics in the development world 
   p .
