@@ -28,6 +28,7 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/events', routes.events);
+app.get('/events/:date', routes.eventPage);
 app.get('/resources', routes.resources);
 app.get('/members', routes.members);
 

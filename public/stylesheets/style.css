@@ -13,6 +13,10 @@ body {
   overflow-y: none;
 }
 
+time {
+    font-weight: bold;
+}
+
 .divider {
     border-top: 1px solid #d0cece;
     margin-top: 10px;
@@ -186,4 +190,14 @@ footer {
         
         #main.index .columns > div:first-child {
             margin-left: 0;
+        }
+        
+    #main.events {
+    }
+        
+        #main.events img,
+        #main.event-page img {
+            float: left;
+            display: block;
+            margin-right: 20px;
         }
