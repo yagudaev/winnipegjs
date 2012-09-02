@@ -64,6 +64,10 @@ header {
         font-weight: 500;
         margin: 10px 20px 7px 25px;
         font-family: Lobster;
+    }
+
+    #logo a {
+        text-decoration: none;
         color: #574d4f;
     }
 
