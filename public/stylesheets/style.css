@@ -23,6 +23,10 @@ time {
     margin-bottom: 10px;
 }
 
+.map {
+    float: right;
+}
+
 .announcement {
     background: #ffe999;
     border-radius: 5px;
@@ -214,3 +218,17 @@ footer {
             display: block;
             margin-right: 20px;
         }
+    #main.event-page {
+    }
+    
+    #main.event-page .description {
+        position: absolute;
+        left: 25px;
+        right: 500px;
+    }
+    
+    #main.event-page .map {
+        margin-top: 75px;
+        float: right;
+        width: 425px;
+    }
