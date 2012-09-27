@@ -13,6 +13,10 @@ body {
   overflow-y: none;
 }
 
+h2 {
+    clear: both;
+}
+
 time {
     font-weight: bold;
 }
@@ -218,6 +222,17 @@ footer {
             display: block;
             margin-right: 20px;
         }
+        
+        #main.events ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #main.events li {
+            padding-bottom: 20px;
+        }
+        
     #main.event-page {
     }
     
