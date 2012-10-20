@@ -4,11 +4,16 @@
     src: local('lobster'), url('/fonts/lobster-1.4.ttf') format('truetype'); /* for real browsers */
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: white url(/images/bg.jpg) repeat;
   margin: 0;
+  background-color: #574D4F;
   padding: 0;
   overflow-y: none;
 }
@@ -165,12 +170,13 @@ footer {
     }
 
 #main {
-    margin: 10px 25px;
-    min-height: 600px;
+    padding: 10px 25px;
+    min-height: 75%;
+    background: white url(/images/bg.jpg) repeat;
 }
 
     #main.index {
-        margin-bottom: 25px;
+        padding-bottom: 25px;
     }
     
     #main.index .logo-wrapper {
@@ -236,14 +242,25 @@ footer {
     #main.event-page {
     }
     
-    #main.event-page .description {
-        position: absolute;
-        left: 25px;
-        right: 500px;
-    }
-    
-    #main.event-page .map {
-        margin-top: 75px;
-        float: right;
-        width: 425px;
-    }
+        #main.event-page .description {
+        
+}
+        
+        #main.event-page ul.tdd-benefit-list {
+            margin-left: 10px;
+        }
+        #main.event-page img {
+        }
+        
+        #main.event-page .map {
+            margin-top: 75px;
+            float: right;
+            width: 425px;
+            padding-left: 25px;
+        
+            overflow: auto;
+        }
+        
+        #main.event-page .description h2 {
+            clear: none;   
+        }

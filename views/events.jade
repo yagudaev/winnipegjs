@@ -3,17 +3,25 @@ extends layout
 block content
   h1 #{title}
   
+  p .
+    If you have any suggestion do not hesitate to contact us at <a target="_blank" href="http://twitter.com/winnipegjs">@winnipejs</a> or by email <a href="mailto:michael@yagudaev.com">michael@yagudaev.com</a>.
+
   ul
     li
       h2 
-        a(href="/events/") Second Meetup: October Meeting (TBA)
-      time(datetime="2012-10-20") TBA October, 2012 @ TBA
+        a(href="/events/oct-30-2012") Second Meetup: Test Driven Development
+      time(datetime="2012-10-30") Tuesday October 30th, 2012 @ UofM SmartPark
       a(href="/events/")
-        img(src="/images/tba-topic-logo.jpg")
+        img(src="/images/jasmin-logo.png")
       p .
-        Topic(s) will be annoucned soon. We are hoping to talk about TDD in Javascript, but this will depend on availability of the speaker.
+        Test Driven Development is software development methodology based on "test first" approach.
       p .
-        If you have any suggestion do not hesitate to contact us at <a target="_blank" href="http://twitter.com/winnipegjs">@winnipejs</a> or by email <a href="mailto:michael@yagudaev.com">michael@yagudaev.com</a>.
+        That means that before even writing a line of code we need to write a test for it. 
+      p .
+        The idea seems fine for languages like C# however what about Javascript? Javascript is quite a popular language (if not the most) so, are we condemned to test the UI every time I want to test my JS code? Why can't we do TDD with it?
+      p .
+        Of course we can! Join me on a session to discuss how to start with Jasmine, a JS library for testing in general, that provides great syntax to use TDD. I assure you your JS code will never be the same!
+
     li
       h2 
         a(href="/events/sep-26-2012") First Meetup: Intro to Node.js

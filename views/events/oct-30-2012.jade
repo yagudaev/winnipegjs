@@ -1,0 +1,54 @@
+extends ../layout
+
+block content
+  div.map
+    iframe(width="425", height="350", frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=49.802578,-97.149136&amp;output=embed")
+    br
+    small 
+      a(href="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=49.802578,-97.149136&amp;source=embed", style="color:#0000FF;text-align:left") .
+        View Larger Map
+
+    p 
+      b Location:
+      a(href="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&hl=en&ll=49.802804,-97.147121&spn=0.008587,0.020213&sll=49.853822,-97.152225&sspn=0.791562,2.113495&oq=1+Research+Road,+&hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&t=m&z=16" ) 
+        div Smart Park Event Center - 2nd floor
+        div 1 Research Rd 
+        div Winnipeg, MB R3T 6E3
+
+  div.description.event-2012-10-30
+    h1 Second Meetup: Test Driven Development
+    time(datetime="2012-10-30 18:00") 6pm Tuesday, October 30, 2012 @ UofM Smart Park
+
+    img(src="/images/jasmin-logo.png")
+
+    p 
+      | Please RSVP to the event using Eventbrite using this link: 
+      a(href="http://www.eventbrite.com/event/4657304122") Eventbirte
+      | .
+
+    p .
+      Test Driven Development is software development methodology based on "test first" approach.
+    p .
+      That means that before even writing a line of code we need to write a test for it. 
+    p .
+      Benefits of applying TDD includes:
+    ul
+      li Increase development confidence
+      li Improve quality of the code and use quality as a driver
+      li Regression testing at any point
+      li Automatic documentation
+      li Bring back the joy of coding!
+    p .
+      The idea seems fine for languages like C# however what about Javascript? Javascript is quite a popular language (if not the most) so, are we condemned to test the UI every time I want to test my JS code? Why can't we do TDD with it?
+    p .
+      Of course we can! Join me on a session to discuss how to start with Jasmine, a JS library for testing in general, that provides great syntax to use TDD. I assure you your JS code will never be the same!
+
+    h2 About the Speaker
+    p .
+      Amir Barylko started his career in 1994 working for IBM as a senior developer while he was finishing his Masters degree in computer science. Since then he worked as team leader and architect for the past 15 years.
+    p .
+      Having started with languages like C++ and Java he spent many years coding in C# and training other developers in topics such domain modeling, abstractions, patterns, automation, dependency injection, testing, etc.
+
+      Being an incurable geek, always thirsty for knowledge, his passion for technology moved him towards Ruby on Rails a few years ago, becoming an advocate of RoR web development. Also following he's teaching passion he did his first RoR training a year ago, and recently a TDD training with great reviews.
+
+      Amir is a rare combination of high technical skills, lots of experience in a wide range of platforms, exceptional presentation skills and great sense of humor. His presentations are always rich in content and fun to attend.
