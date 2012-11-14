@@ -1,0 +1,59 @@
+extends ../layout
+
+block content
+  div.map
+    iframe(width="425", height="350", frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=49.802578,-97.149136&amp;output=embed")
+    br
+    small 
+      a(href="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=49.802578,-97.149136&amp;source=embed", style="color:#0000FF;text-align:left") .
+        View Larger Map
+
+    p 
+      b Location:
+      a(href="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&hl=en&ll=49.802804,-97.147121&spn=0.008587,0.020213&sll=49.853822,-97.152225&sspn=0.791562,2.113495&oq=1+Research+Road,+&hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&t=m&z=16" ) 
+        div Smart Park Event Center - 2nd floor
+        div 1 Research Rd 
+        div Winnipeg, MB R3T 6E3
+
+  div.description.event-2012-11-21
+    h1 Third Meetup: Phonegap - Cross Platform Mobile Development
+    time(datetime="2012-11-21 18:00") 6pm Wed, November 21, 2012 @ UofM Smart Park
+
+    img(src="/images/phonegap-logo.png")
+
+    p 
+      | Please RSVP to the event using Eventbrite using this link: 
+      a(href="http://www.eventbrite.com/event/4841163049") Eventbrite
+      | .
+
+    p .
+      Phonegap is a platform that bridges the shortcomings of standard mobile web 
+      and native applications. It provides a standard API and tools to produce a 
+      compiled native application, while still using Javascript as our language of choice. 
+    
+    p .
+      Mobile device usage has grown at an incredible pace, both in developed and 
+      developing countries. The opportunities within this mobile space are huge, 
+      however, the fast differences between the environment and languages for 
+      each platform introduces many challenges. Mobile Web applications provide 
+      us with most of the tools and Phonegap gets us the rest of the way. 
+
+    p .
+      We will first discuss Mobile Web, see how far its come and see a simple 
+      demonstration of what it can do.  Then, we will move onto Phonegap, 
+      what problems it solves, how it can be extended and some caveats of the platform.
+
+    h2 About the Speaker
+    p .
+      Dan Slack (<a href="https://twitter.com/javaslack">@javaslack</a>) has been working with Javascript for 8 years now. 
+      He currently works a small mobile-centric company, Niche Solutions, 
+      were he is working on mobile solutions for enterprise customers. 
+      He has both experince working on native level applications as well as using Phonegap.
+    
+  script
+    var uvOptions = {};
+    (function() {
+      var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+      uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/U9KeJNoB0mOZcYha78gHA.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+    })();
