@@ -2,7 +2,11 @@ doctype 5
 html
   head
     title= title
+    // Used so mobile browsers scale by default correctly
+    meta(name="viewport", content="width=device-width")
+    
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/mobile-style.css', media="only screen and (max-device-width: 720px)")
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='shortcut icon', href='/images/favicon.ico')
     script(src='/javascripts/modernizr.custom.js')
