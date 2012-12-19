@@ -264,3 +264,8 @@ footer {
         #main.event-page .description h2 {
             clear: none;   
         }
+
+/*Make desktop version link invisible*/
+div.to_desktop_link{
+	display: none;
+}

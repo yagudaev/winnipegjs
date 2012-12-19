@@ -3,10 +3,12 @@ html
   head
     title= title
     // Used so mobile browsers scale by default correctly
-    meta(name="viewport", content="width=device-width")
+    - if (to_desktop === '')
+      meta(name="viewport", content="width=device-width")
     
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/mobile-style.css', media="only screen and (max-device-width: 720px)")
+    - if (to_desktop === '')
+      link(rel='stylesheet', href='/stylesheets/mobile-style.css', media="only screen and (max-device-width: 720px)")
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='shortcut icon', href='/images/favicon.ico')
     script(src='/javascripts/modernizr.custom.js')
@@ -27,13 +29,13 @@ html
         a(href="/") (Winnipeg.js);
       ul#nav
         li 
-          a(href="/", class= page === 'index' ? 'active' : '') Home
+          a(href="/#{to_desktop}", class= page === 'index' ? 'active' : '') Home
         li
-          a(href="/events", class= page === 'events' ? 'active' : '') Events
+          a(href="/events#{to_desktop}", class= page === 'events' ? 'active' : '') Events
         li 
-          a(href="/resources", class= page === 'resources' ? 'active' : '') Resources
+          a(href="/resources#{to_desktop}", class= page === 'resources' ? 'active' : '') Resources
         li 
-          a(href="/members", class= page === 'members' ? 'active' : '') Members
+          a(href="/members#{to_desktop}", class= page === 'members' ? 'active' : '') Members
     div#main(class=page)
       block content
     footer
@@ -57,3 +59,9 @@ html
         div .
           Designed by
           <a href="http://www.vadimbrodsky.com">Vadim Brodsky</a>
+      
+      // Reloads page with to_desktop get modifier so a mobile can view desktop pages from now on. If the mobile wants
+      // to start viewing mobile pages again the ?to_desktop is just erased
+      .to_desktop_link
+        - page = (page === 'index') ? '' : page;
+        a(href="#{page}?to_desktop") Desktop Version
