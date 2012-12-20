@@ -2,12 +2,13 @@ doctype 5
 html
   head
     title= title
+    
     // Used so mobile browsers scale by default correctly
-    - if (to_desktop === '')
+    - if (!to_desktop)
       meta(name="viewport", content="width=device-width")
     
     link(rel='stylesheet', href='/stylesheets/style.css')
-    - if (to_desktop === '')
+    - if (!to_desktop)
       link(rel='stylesheet', href='/stylesheets/mobile-style.css', media="only screen and (max-device-width: 720px)")
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='shortcut icon', href='/images/favicon.ico')
@@ -29,13 +30,13 @@ html
         a(href="/") (Winnipeg.js);
       ul#nav
         li 
-          a(href="/#{to_desktop}", class= page === 'index' ? 'active' : '') Home
+          a(href="/", class= page === 'index' ? 'active' : '') Home
         li
-          a(href="/events#{to_desktop}", class= page === 'events' ? 'active' : '') Events
+          a(href="/events", class= page === 'events' ? 'active' : '') Events
         li 
-          a(href="/resources#{to_desktop}", class= page === 'resources' ? 'active' : '') Resources
+          a(href="/resources", class= page === 'resources' ? 'active' : '') Resources
         li 
-          a(href="/members#{to_desktop}", class= page === 'members' ? 'active' : '') Members
+          a(href="/members", class= page === 'members' ? 'active' : '') Members
     div#main(class=page)
       block content
     footer
@@ -62,6 +63,10 @@ html
       
       // Reloads page with to_desktop get modifier so a mobile can view desktop pages from now on. If the mobile wants
       // to start viewing mobile pages again the ?to_desktop is just erased
-      .to_desktop_link
-        - page = (page === 'index') ? '' : page;
-        a(href="#{page}?to_desktop") Desktop Version
+      - page = (page === 'index') ? '' : page;
+      - if (!to_desktop)
+        .transfer_link
+          a(href="/set_desktop?to=true&page=#{page}&title=#{title}") Desktop Version
+      - else
+        .transfer_link
+          a(href="/set_desktop?to=false&page=#{page}&title=#{title}") Mobile Version

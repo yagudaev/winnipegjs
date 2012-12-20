@@ -106,17 +106,3 @@ footer {
         padding: 0;
         margin: 5px 0;
     }
-    
-/*Make transfer version link visible on mobile. When mobile is in mobile mode to desktop is displayed otherwise to mobile is
-  displayed*/
-div.to_desktop_link{
-	display: block;
-    text-align: center;
-    
-    /*In case in-browser buttons, e.g. zoom-in in Dolphin, or other stuff obscures the bottom of the page*/
-    margin-bottom: 50px;
-}
-
-    div.to_desktop_link > a{
-        color: white;
-    }
