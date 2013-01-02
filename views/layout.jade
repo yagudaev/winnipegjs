@@ -3,13 +3,13 @@ html
   head
     title= title
     
-    // Used so mobile browsers scale by default correctly
+    // Viewport is used so mobile browsers scale by default correctly
     - if (!to_desktop)
       meta(name="viewport", content="width=device-width")
     
     link(rel='stylesheet', href='/stylesheets/style.css')
     - if (!to_desktop)
-      link(rel='stylesheet', href='/stylesheets/mobile-style.css', media="only screen and (max-device-width: 720px)")
+      link(rel='stylesheet', href='/stylesheets/mobile-style.css', media="only screen and (max-device-width: 1010px)")
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='shortcut icon', href='/images/favicon.ico')
     script(src='/javascripts/modernizr.custom.js')
@@ -40,7 +40,7 @@ html
     div#main(class=page)
       block content
     footer
-      div
+      div#social_media
         div
           a(href="http://www.linkedin.com/groups/Winnipegjs-4520628?home=&gid=4520628&trk=anet_ug_hm&goback=%2Egmp_4520628")
             img(src="/images/linkedin-icon.png", alt="Join us on Linkedin", title="Join us on Linkedin")

@@ -1,67 +1,51 @@
-/*TEST: Makes top left corner logo red, this means client has been detected as mobile*/
-#logo a {
-    color: red;
-    text-decoration: none;
-}
-
 /*Erase top left logo*/
 header #logo {
     display: none;
 }
 
-    /*Resize center logo*/
-
-    /*Reformat menu*/
-    header ul {
-        margin: 0;
-        padding: 0;
-        
-        /*center*/
-        float: none;
-        margin-left: 17px;
-    }
-
-    header li {
-        display: block;
-        margin: 10px 5px;
-        float: left;
-    }
+/*Reformat menu*/
+header ul {
+    margin: 0;
+    padding: 0;
+    float: none;
     
-        header li a {
-            /*padding: 5px 20px;*/
-            padding: 5px 10px;
-        }
-  
-/*Resizing area between top menu and bottom info*/      
-#main {
-    padding: 10px 25px;
-    background: white url(/images/bg.jpg) repeat;
+    /*centering*/
+    margin: 0 auto;
+    width: 319px;
 }
 
-    #main.index .logo-wrapper {
-        margin-bottom: 20px;
-        margin-top: 0px;
+header li {
+    margin: 10px 4px;
+}
+
+    header li a {
+        padding: 5px 10px;
+    }
+  
+/*Resizing area between top menu and bottom info*/
+#main.index .logo-wrapper {
+    margin: 0 0 20px 0;
+}
+
+#main.index .logo {
+    font-size: 3em;
+}
+
+/* Who are we? What is Javascript? etc to single column layout*/
+#main.index .columns {
+    margin-top: 0px;
+    width: 100%;
+}
+    #main.index .columns > div {
+        float: none;
+        width: 97%;
+        margin-left: 0px;
+    }
+    
+    #main.index .columns > div:first-child {
+        margin-left: 0;
     }
 
-    #main.index .logo {
-        font-size: 3em;
-    }
-    
-    /* Who are we? What is Javascript? etc to single column layout*/
-    #main.index .columns {
-        margin-top: 0px;
-        width: 100%;    
-    }
-        #main.index .columns > div {
-            float: none;
-            width: 97%;
-            margin-left: 0px;
-        }
-        
-        #main.index .columns > div:first-child {
-            margin-left: 0;
-        }
-    
 /* event list page, just some tweaks to spacing*/
 #main.events img {
     margin-right: 12px;
@@ -112,9 +96,9 @@ header #logo {
         }
         
     #main.event-page .map {
-        margin: 0;
         float: none;
         width: 100%;
+        margin: 0;
         padding-left: 0;
     }
     
@@ -126,8 +110,7 @@ header #logo {
         /* since map covers entire width must maintain borders on elements*/
         #main.event-page .map small{
             font-size: 1.2em;
-            text-align: center;
-            margin-left: 34%;
+            margin-left: 25px;
         }
         
         #main.event-page .map p{
@@ -157,30 +140,25 @@ footer {
 }
 
     footer > div {
-        width: 350px;
+        width: 100%;
     }
     
-    footer > div > div {
+    footer > div#social_media > div {
         float: none;
-        margin-left: 60px;
-        margin-top: 10px;
+        
+        /*centering*/
+        margin: 10px auto;
+        width: 250px;
     }
     
     footer #copyrights {       
-        width: 300px;
+        width: 100%;
         font-size: 1em;
         padding: 0;
-    }
-    
-    footer #copyrights a {
-        color: #969091;
-        display: inline;
-        text-align: center;
-        margin: 0;
+        margin-top: 0;
     }
     
     footer #copyrights > div {
         float: none;
-        padding: 0;
         margin: 5px 0;
     }

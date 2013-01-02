@@ -270,7 +270,7 @@ div.transfer_link{
 }
 
 /*Make desktop version link visible for mobile only*/
-@media only screen and (max-device-width: 720px) {
+@media only screen and (max-device-width: 1010px) {
 	/*When mobile is in mobile mode to desktop is displayed otherwise to mobile is displayed*/
 	div.transfer_link{
 		display: block;
