@@ -1,0 +1,40 @@
+/*Reformat top menu, IE screwed up bottom spacing and the colors (due to use of opacity)*/
+header ul {
+    margin: 0px auto 10px auto;
+}
+
+header li {
+    background-color: #897751;
+}
+
+/*Generic main page spacing fix*/
+#main {
+    padding-top: 20px;
+}
+
+/* Who are we? What is Javascript? and the logo etc fix spacing*/
+#main.index {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+    #main.index .logo-wrapper {
+        margin: 0 5px 25px 5px;
+    }
+
+    #main.index .columns {
+        width: 92%;
+    }
+        #main.index .columns > div {
+            width: 100%;
+            margin-top: 20px
+        }
+        
+        #main.index .columns > div:first-child {
+            margin-top: 10px
+        }
+
+/*I have to seperate the view larger map and the location links underneath*/
+#main.event-page .map div:first-child{
+    margin-top: 10px;
+}

@@ -17,10 +17,24 @@ Run
 
 Simply run as a normal express application by using `node app.js`.
 
-Notes
-=====
+Mobile Interfaces Supported
+===========================
+[E] means the interface was tested only on an emulator/simulator.
 
-* Currently the mobile interface is only designed for the latest Dolphin and Android 4.2 stock browsers. Once the main design is finalized the interface will work in as many mobile browsers as possible. You can simulate the android 4.2 stock browser by using an Android emulator.
+* Desktop
+ * [E] Safari on iPad using iOS 4.3
+ * [E] Safari on iPad using iOS 5
+ * [E] Safari on iPad using iOS 6 (with retina display)
+ 
+* Mobile
+ * [E] Safari on iPhone using iOS 4.3
+ * [E] Safari on iPhone using iOS 5
+ * [E] Safari on iPhone using iOS 6 (with retina display)
+ * [E] IE 7 on Windows Phone 7
+ * Default browser on Android 2.2
+ * Default browser on Android 4.2
+ * Dolphin on Android 4.2
+ * Chrome on Android 4.2
 
 Contributors
 ==========
@@ -32,3 +46,4 @@ Development by Michael Yagudaev
 Mobile interface by:
 
 * Jacob Friesen (For this fork)
+
