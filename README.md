@@ -1,14 +1,12 @@
 winnipegjs
 ==========
 
-**This is a forked version of the Winnipeg.js website for exploring a mobile interface, if you would like to contribute contact jacob@jacobfriesen.com.**
-
 Winnipeg.js Community Website. Feel free to make pull requests we will be accepting changes that improve the site.
 
 Install
 =======
 
-1. Clone repo using `git clone git://github.com/Jacob-Friesen/winnipegjs.git` (For this fork only)
+1. Clone repo using `git clone git://github.com/yagudaev/winnipegjs.git`
 2. Go to the project directory `cd winnipegjs`
 3. Install dependencies using `npm install`
 
@@ -21,12 +19,12 @@ Mobile Interfaces Supported
 ===========================
 [E] means the interface was tested only on an emulator/simulator.
 
-* Desktop
+* To Desktop Interface:
  * [E] Safari on iPad using iOS 4.3
  * [E] Safari on iPad using iOS 5
  * [E] Safari on iPad using iOS 6 (with retina display)
  
-* Mobile
+* To Mobile Interface:
  * [E] Safari on iPhone using iOS 4.3
  * [E] Safari on iPhone using iOS 5
  * [E] Safari on iPhone using iOS 6 (with retina display)
@@ -45,5 +43,5 @@ Development by Michael Yagudaev
 
 Mobile interface by:
 
-* Jacob Friesen (For this fork)
+* Jacob Friesen (Original Interface)
 
