@@ -264,3 +264,23 @@ footer {
         #main.event-page .description h2 {
             clear: none;   
         }
+
+div.transfer_link{
+	display: none;
+}
+
+/*Make desktop version link visible for mobile only, must be the same as media_selector in layout.jade.*/
+@media only screen and (max-device-width: 720px) {
+	/*When mobile is in mobile mode to desktop is displayed otherwise to mobile is displayed*/
+	div.transfer_link{
+		display: block;
+		text-align: center;
+    
+		/*In case in-browser buttons, e.g. zoom-in in Dolphin, or other stuff obscures the bottom of the page*/
+		margin-bottom: 50px;
+	}
+	
+	div.transfer_link > a{
+        color: white;
+    }
+}

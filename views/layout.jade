@@ -1,8 +1,32 @@
+- var media_selector = "only screen and (max-device-width: 720px)";
+
 doctype 5
 html
   head
     title= title
+    
+    // Viewport is used so mobile browsers scale by default correctly, set using Modernizer below
+    - if (!to_desktop)
+      meta(name="viewport", id="viewport", content="")
+      //IE does not support media queries so the modernizer viewport attribute update will fail, so (can do IEMobile 7  and etc.):
+      <!--[if IEMobile]>
+      meta(name="viewport", id="viewport", content="device-width")
+      <![endif]-->
+    
     link(rel='stylesheet', href='/stylesheets/style.css')
+    - if (!to_desktop)
+    
+      link(rel='stylesheet', href='/stylesheets/mobile-style.css', media=media_selector)
+      <!--[if IEMobile]> 
+      link(rel="stylesheet", href="/stylesheets/mobile-style.css")
+      link(rel="stylesheet", href="/stylesheets/mobile-style-ie.css")
+      <![endif]-->
+      
+    // For mobile version link when in IE on Windows Phone in the desktop interface
+    <!--[if IEMobile]>
+    link(rel="stylesheet", href="/stylesheets/transfer-link-visible.css")
+    <![endif]-->
+      
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='shortcut icon', href='/images/favicon.ico')
     script(src='/javascripts/modernizr.custom.js')
@@ -17,6 +41,23 @@ html
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+      
+      // viewport is only used for phones of appropriate widths, don;t want to set viewport on iPads as they
+      // are given the desktop interface.
+      var viewport = document.getElementById("viewport");
+      if(Modernizr.mq("#{media_selector}")){
+        if(viewport)
+          viewport.setAttribute("content", "width=device-width");
+      }
+      
+      // The Android 2.2 default browser can report incorrect device-widths, so I must give it mobile assets.
+      if (navigator.userAgent.replace(/ /g, "").search('Android2.2') > 0){
+        if("#{to_desktop}" === "false"){
+          viewport.setAttribute("content", "width=device-width");
+          document.write('<link rel="stylesheet" href="/stylesheets/mobile-style.css">');
+        }
+        document.write('<link rel="stylesheet" href="/stylesheets/transfer-link-visible.css">');
+      }
   body
     header
       div#logo 
@@ -33,7 +74,7 @@ html
     div#main(class=page)
       block content
     footer
-      div
+      div#social_media
         div
           a(href="http://www.linkedin.com/groups/Winnipegjs-4520628?home=&gid=4520628&trk=anet_ug_hm&goback=%2Egmp_4520628")
             img(src="/images/linkedin-icon.png", alt="Join us on Linkedin", title="Join us on Linkedin")
@@ -53,3 +94,13 @@ html
         div .
           Designed by
           <a href="http://www.vadimbrodsky.com">Vadim Brodsky</a>
+      
+      // Reloads page with to_desktop get modifier so a mobile can view desktop pages from now on. If the mobile wants
+      // to start viewing mobile pages again the ?to_desktop is just erased
+      - page = (page === 'index') ? '' : page;
+      - if (!to_desktop)
+        .transfer_link
+          a(href="/set_desktop?to=true&page=#{page}&title=#{title}") Desktop Version
+      - else
+        .transfer_link
+          a(href="/set_desktop?to=false&page=#{page}&title=#{title}") Mobile Version

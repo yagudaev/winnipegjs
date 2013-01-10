@@ -1,0 +1,12 @@
+/*CSS selectors don't work in older IEs so I must make the transfer link code visible here*/
+div.transfer_link{
+    display: block;
+    text-align: center;
+
+    /*In case in-browser buttons, e.g. zoom-in in Dolphin, or other stuff obscures the bottom of the page*/
+    margin-bottom: 50px;
+}
+    
+div.transfer_link > a{
+    color: white;
+}
