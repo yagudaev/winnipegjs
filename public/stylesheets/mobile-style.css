@@ -1,0 +1,164 @@
+/*Erase top left logo*/
+header #logo {
+    display: none;
+}
+
+/*Reformat menu*/
+header ul {
+    margin: 0;
+    padding: 0;
+    float: none;
+    
+    /*centering*/
+    margin: 0 auto;
+    width: 319px;
+}
+
+header li {
+    margin: 10px 4px;
+}
+
+    header li a {
+        padding: 5px 10px;
+    }
+  
+/*Resizing area between top menu and bottom info*/
+#main.index .logo-wrapper {
+    margin: 0 0 20px 0;
+}
+
+#main.index .logo {
+    font-size: 3em;
+}
+
+/* Who are we? What is Javascript? etc to single column layout*/
+#main.index .columns {
+    margin-top: 0px;
+    width: 100%;
+}
+    #main.index .columns > div {
+        float: none;
+        width: 97%;
+        margin-left: 0px;
+    }
+    
+    #main.index .columns > div:first-child {
+        margin-left: 0;
+    }
+
+/* event list page, just some tweaks to spacing*/
+#main.events img {
+    margin-right: 12px;
+}
+
+#main.events time{
+    display: block;
+    margin-bottom: 17px;
+}
+
+#main.events ul{
+}
+
+    #main.events ul li{
+        margin-bottom: 20px;
+        padding-bottom: 0;
+    }
+    
+        #main.events ul li p{
+            margin-bottom: 0px;
+        }
+
+/* event detail page single column modifications*/ 
+#main.event-page {
+    margin: 0;
+    padding: 0;
+}
+    
+    #main.event-page .description {    
+        padding: 0 25px 10px 25px;
+    }
+    
+        #main.event-page .description h1{    
+            font-size: 1.5em;
+        }
+        
+        #main.event-page .description time{
+            display: block;
+            margin-bottom: 17px;
+        }
+        
+        #main.event-page .description img{
+            display: none;
+        }
+        
+        #main.event-page .description p:first-of-type{
+            margin-top: 0;
+        }
+        
+    #main.event-page .map {
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+    }
+    
+        #main.event-page .map iframe{
+            width: 100%;
+            height: 250px;
+        }
+        
+        /* since map covers entire width must maintain borders on elements*/
+        #main.event-page .map small{
+            font-size: 1.2em;
+            margin-left: 25px;
+        }
+        
+        #main.event-page .map p{
+            display: none;
+        }
+        
+        #main.event-page .map div{
+            margin-left: 25px;
+        }
+        
+        #main.event-page .map div:first-of-type{
+            margin-top: 10px;
+        }
+        
+        #main.event-page .map small, #main.event-page .map div{
+            font-size: 1.2em;
+        }
+    
+.announcement {
+    padding: 10px 20px;
+    font-size: 21px;
+}
+
+/*footer information like linked in and twitter links*/
+footer {
+    padding: 5px 0;
+}
+
+    footer > div {
+        width: 100%;
+    }
+    
+    footer > div#social_media > div {
+        float: none;
+        
+        /*centering*/
+        margin: 10px auto;
+        width: 250px;
+    }
+    
+    footer #copyrights {       
+        width: 100%;
+        font-size: 1em;
+        padding: 0;
+        margin-top: 0;
+    }
+    
+    footer #copyrights > div {
+        float: none;
+        margin: 5px 0;
+    }

@@ -1,6 +1,20 @@
 extends ../layout
 
 block content
+  div.map
+    iframe(width="425", height="350", frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=49.802578,-97.149136&amp;output=embed")
+    br
+    small 
+      a(href="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=49.802578,-97.149136&amp;source=embed", style="color:#0000FF;text-align:left") .
+        View Larger Map
+
+    p 
+      b Location:
+      a(href="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&hl=en&ll=49.802804,-97.147121&spn=0.008587,0.020213&sll=49.853822,-97.152225&sspn=0.791562,2.113495&oq=1+Research+Road,+&hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&t=m&z=16" ) 
+        div Smart Park Event Center - 2nd floor
+        div 1 Research Rd 
+        div Winnipeg, MB R3T 6E3
+
   div.description
     h1 First Meetup: Intro to Node.js
     time(datetime="2012-09-26 18:00") 6pm Wednesday, September 26, 2012 @ UofM Smart Park
@@ -27,19 +41,6 @@ block content
       a(target="_blank", href="https://github.com/yagudaev/winnigram") Source Code (github)
     p
       a(target="_blank", href="http://youtu.be/Rqxx7R_m1aQ") Video (only first part of talk)
-  div.map
-    iframe(width="425", height="350", frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=49.802578,-97.149136&amp;output=embed")
-    br
-    small 
-      a(href="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=49.802578,-97.149136&amp;source=embed", style="color:#0000FF;text-align:left") .
-        View Larger Map
-
-    p 
-      b Location:
-      a(href="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&hl=en&ll=49.802804,-97.147121&spn=0.008587,0.020213&sll=49.853822,-97.152225&sspn=0.791562,2.113495&oq=1+Research+Road,+&hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&t=m&z=16" ) 
-        div Smart Park Event Center - 2nd floor
-        div 1 Research Rd 
-        div Winnipeg, MB R3T 6E3
 
   script
     var uvOptions = {};
