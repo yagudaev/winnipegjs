@@ -32,7 +32,7 @@ app.get('/events', routes.events);
 app.get('/events/:date', routes.eventPage);
 app.get('/resources', routes.resources);
 app.get('/members', routes.members);
-app.get('/set_desktop', routes.set_desktop);
+app.get('/set_desktop', routes.setDesktop);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

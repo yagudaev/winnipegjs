@@ -23,7 +23,7 @@ Mobile Interfaces Supported
  * [E] Safari on iPad using iOS 4.3
  * [E] Safari on iPad using iOS 5
  * [E] Safari on iPad using iOS 6 (with retina display)
- 
+
 * To Mobile Interface:
  * [E] Safari on iPhone using iOS 4.3
  * [E] Safari on iPhone using iOS 5
@@ -39,9 +39,7 @@ Contributors
 
 Design by Vadim Brodsky
 
-Development by Michael Yagudaev
+Desktop Development by Michael Yagudaev
 
-Mobile interface by:
-
-* Jacob Friesen (Original Interface)
+Mobile Development by Jacob Friesen
 
