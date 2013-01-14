@@ -1,6 +1,6 @@
 extends layout
 
-block content
+block append content
   h1 #{title}
   
   p .
@@ -47,11 +47,3 @@ block content
         We decided to do our first meeting about one of the hottest topics in the development world 
       p .
         We will start with a quick introduction to Node.js and then go over a few uses of Node.js and when not to use it. We will then dive into a few popular frameworks and see what each is good for and which you should use for your projects. <a href="/events/sep-26-2012">More</a>
-
-  script
-    var uvOptions = {};
-    (function() {
-      var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-      uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/U9KeJNoB0mOZcYha78gHA.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-    })();

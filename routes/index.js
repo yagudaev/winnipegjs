@@ -14,7 +14,7 @@ exports.index = function(req, res) {
 };
 
 exports.events = function(req, res) {
-  res.render('events', { title: 'Events', page: 'events', toDesktop: toDesktop(req) });
+  res.render('events/index', { title: 'Events', page: 'events', toDesktop: toDesktop(req) });
 };
 
 exports.resources = function(req, res) {
@@ -29,11 +29,15 @@ exports.eventPage = function(req, res) {
   // don't allow directory traversal
   var page = 'events/' + req.params.date.replace(/\.\.|\./, ' ');
 
+  // do not allow the layout page to be rendered by itself
+  if (page === 'events/layout' || page === 'events/index')
+    return res.status(404).render('404', { title: 'Page not Found 404', page: '404', toDesktop: toDesktop(req)});
+
   fs.exists(path.normalize(__dirname + '/../views/' + page + '.jade'), function(exists) {
     if (exists) {
       res.render(page, { title: EVENT_PRE_TITLE + req.params.date, page: EVENT_PAGE_NAME, toDesktop: toDesktop(req)});
     } else {
-      res.render('404', { title: 'Page not Found 404', page: '404', toDesktop: toDesktop(req)});
+      res.status(404).render('404', { title: 'Page not Found 404', page: '404', toDesktop: toDesktop(req)});
     }
   });
 

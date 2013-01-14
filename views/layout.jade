@@ -42,11 +42,11 @@ html
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
-      // viewport is only used for phones of appropriate widths, don;t want to set viewport on iPads as they
+      // viewport is only used for phones of appropriate widths, don't want to set viewport on iPads as they
       // are given the desktop interface.
       var viewport = document.getElementById("viewport");
-      if(Modernizr.mq("#{media_selector}")){
-        if(viewport)
+      if (Modernizr.mq("#{media_selector}")) {
+        if (viewport)
           viewport.setAttribute("content", "width=device-width");
       }
 
@@ -89,8 +89,11 @@ html
           span Contribute on <a href="http://github.com/yagudaev/winnipegjs">Github</a>
       div#copyrights
         div .
-          Winnipeg.js website developed by
+          Developed by
           <a href="http://www.yagudaev.com">Michael Yagudaev</a>
+        div .
+          Mobile by
+          <a href="http://jacobfriesen.com/">Jacob Friesen</a>
         div .
           Designed by
           <a href="http://www.vadimbrodsky.com">Vadim Brodsky</a>

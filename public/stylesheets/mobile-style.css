@@ -162,3 +162,7 @@ footer {
         float: none;
         margin: 5px 0;
     }
+
+#uvTab {
+    display: none !important;
+}

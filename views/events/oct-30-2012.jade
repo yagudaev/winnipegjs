@@ -1,6 +1,6 @@
-extends ../layout
+extends layout
 
-block content
+block append content
   div.map
     iframe(width="425", height="350", frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=49.802578,-97.149136&amp;output=embed")
     br
@@ -55,11 +55,3 @@ block content
     h2 What to Bring
     p .
       If you wish to follow along you should bring your laptop with you and make sure you install Node.js. We will be using it to run the unit-tests during the presentation.
-
-  script
-    var uvOptions = {};
-    (function() {
-      var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-      uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/U9KeJNoB0mOZcYha78gHA.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-    })();
