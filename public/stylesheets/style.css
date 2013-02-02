@@ -178,6 +178,28 @@ footer {
     #main.index {
         padding-bottom: 25px;
     }
+
+    #main #mc_embed_signup{ 
+        clear: left;
+    }
+    
+    #main #mc_embed_signup input.email {
+        display: block;
+        padding: 3px 0;
+        margin: 0 4% 10px 0;
+        text-indent: 5px;
+        width: 58%;
+        min-width: 130px;
+    }
+    
+    #main #mc_embed_signup form {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #main #mc_embed_signup label {
+        font-size: 12px;
+    }
     
     #main.index .logo-wrapper {
         text-align: center;
@@ -244,7 +266,7 @@ footer {
     
         #main.event-page .description {
         
-}
+        }
         
         #main.event-page ul.tdd-benefit-list {
             margin-left: 10px;

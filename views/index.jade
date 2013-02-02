@@ -1,13 +1,13 @@
 extends layout
- 
+
 block content
   div.logo-wrapper
     span.logo .
       (Winnipeg.js);
     span.tagline a Winnipeg JavaScript user group
-  
+
   div.divider
-  
+
   div.columns
     div
       h2 Who are we?
@@ -20,18 +20,27 @@ block content
       h2 What is Javascript?
       p .
         Javascript is one of the most popular programming languages in the world. It started
-        as a simple way to validate data entered on web forms. It since has grown to be the 
+        as a simple way to validate data entered on web forms. It since has grown to be the
         scripting language of choice not just for the web, but for many software platforms
         ranging from pdfs to servers (with Node.js) and even databases (like MongoDB). The expressive
         nature of the language, its simplicity and light weight were a big factor in its popularity.
     div
       h2 Join us
       p .
-        Javascript was born as a web language. The web is all about sharing and a strong community. 
+        Javascript was born as a web language. The web is all about sharing and a strong community.
         We like to build upon that tradition and help one another build better applications. Of course, we cannot do that without your help! We need you to come to our meetups, present, share, teach and learn.
-  
+
+      // Begin MailChimp Signup Form
+      div#mc_embed_signup
+        form#mc-embedded-subscribe-form(action="http://winnipegjs.us6.list-manage.com/subscribe/post?u=d8f30ceb631a0c2f28fff29dd&amp;id=59794fe157", method="post", name="mc-embedded-subscribe-form", class="validate", target="_blank", novalidate)
+            label(for="mce-EMAIL") Subscribe to our mailing list
+            input#mce-EMAIL(type="email", value="", name="EMAIL", class="email", placeholder="email address", required="required")
+            div(class="clear")
+              input#mc-embedded-subscribe(type="submit", value="Subscribe", name="subscribe", class="button") 
+      // End mc_embed_signup
+
   div.divider
-  
+
   div.announcement
     div
       span .
