@@ -61,7 +61,8 @@ a {
 }
 
 h1 a,
-h2 a {
+h2 a,
+h3 a {
     color: black;
 }
 
@@ -285,6 +286,42 @@ footer {
         
         #main.event-page .description h2 {
             clear: none;   
+        }
+
+    #main.resources {
+    }
+
+        #main.resources h2.section{
+            padding: 7px 0;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-top: 70px;
+            clear: both;
+        }
+
+        #main.resources h2 {
+            padding-top: 30px;
+        }
+
+        #main.resources .books img {
+            float: left;
+            width: 90px;
+            height: auto;
+        }
+
+        #main.resources .books {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #main.resources .books li {
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+
+        #main.resources .books li * {
+            padding-left: 10px;
         }
 
 div.transfer_link{
