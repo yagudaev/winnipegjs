@@ -25,6 +25,10 @@ exports.members = function(req, res) {
   res.render('members', { title: 'Members', page: 'members', toDesktop: toDesktop(req)});
 };
 
+exports.forum = function(req, res) {
+	res.render('forum', { title: 'Forum', page: 'forum', toDesktop: toDesktop(req)});
+};
+
 exports.eventPage = function(req, res) {
   // don't allow directory traversal
   var page = 'events/' + req.params.date.replace(/\.\.|\./, ' ');

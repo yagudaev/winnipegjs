@@ -32,6 +32,7 @@ app.get('/events', routes.events);
 app.get('/events/:date', routes.eventPage);
 app.get('/resources', routes.resources);
 app.get('/members', routes.members);
+app.get('/forum', routes.forum);
 app.get('/set_desktop', routes.setDesktop);
 
 http.createServer(app).listen(app.get('port'), function(){
