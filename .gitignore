@@ -1,3 +1,29 @@
+*.swp
+*~
 .DS_Store
-node_modules/
+data/
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.rej
+*.swo
+*.vi
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+Thumbs.db
+
+# Folders to ignore
 .idea/
+node_modules/
+
+# build script local files
+build/**/*
+build/*

@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "express": "3.0.0rc1",
-    "jade": "*"
+    "ejs": "0.8.x"
   }
 }
