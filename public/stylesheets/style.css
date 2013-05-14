@@ -124,6 +124,7 @@ header {
 
 #footer_spacer {
     height: 125px;
+    clear: both;
 }
 
 footer {
@@ -188,7 +189,7 @@ footer {
 
 #main {
     padding: 10px 25px;
-    /*min-height: 75%;*/
+    min-height: 75%;
 }
 
     #main.index {
