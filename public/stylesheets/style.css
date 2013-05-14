@@ -13,9 +13,9 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
-  background-color: #574D4F;
   padding: 0;
   overflow-y: none;
+  background: white url(/images/bg.jpg) repeat;
 }
 
 h2 {
@@ -123,6 +123,7 @@ footer {
     border-top: 3px solid #969091;
     background: #574d4f;
     color: white;
+    clear: both;
 }
 
     footer > div {
@@ -173,7 +174,6 @@ footer {
 #main {
     padding: 10px 25px;
     min-height: 75%;
-    background: white url(/images/bg.jpg) repeat;
 }
 
     #main.index {
