@@ -37,7 +37,7 @@ exports.eventPage = function(req, res) {
   if (page === 'events/layout' || page === 'events/index')
     return res.status(404).render('404', { title: 'Page not Found 404', page: '404', toDesktop: toDesktop(req)});
 
-  fs.exists(path.normalize(__dirname + '/../views/' + page + '.jade'), function(exists) {
+  fs.exists(path.normalize(__dirname + '/../views/' + page + '.ejs'), function(exists) {
     if (exists) {
       res.render(page, { title: EVENT_PRE_TITLE + req.params.date, page: EVENT_PAGE_NAME, toDesktop: toDesktop(req)});
     } else {

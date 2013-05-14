@@ -62,17 +62,18 @@
 	</script>
 </head>
 <body>
-	<header>
-		<div id="logo">
-			<a href="/">(Winnipeg.js);</a>
-		</div>
-		<ul id="nav">
-			<li><a href="/" class=<%= page === 'index' ? 'active' : ''%>>Home</a></li>
-			<li><a href="/events" class=<%= page === 'events' ? 'active' : ''%>>Events</a></li>
-			<li><a href="/forum" class=<%= page === 'forum' ? 'active' : ''%>>Forum</a></li>
-			<li><a href="/resources" class=<%= page === 'resources' ? 'active' : ''%>>Resources</a></li>
-			<li><a href="/members" class=<%= page === 'members' ? 'active' : ''%>>Members</a></li>
-		</ul>		
-	</header>
-	<div id="main" class=<%=page%>>
+    <div id="body_container">
+        <header>
+            <div id="logo">
+                <a href="/">(Winnipeg.js);</a>
+            </div>
+            <ul id="nav">
+                <li><a href="/" class=<%= page === 'index' ? 'active' : ''%>>Home</a></li>
+                <li><a href="/events" class=<%= page === 'events' ? 'active' : ''%>>Events</a></li>
+                <li><a href="/forum" class=<%= page === 'forum' ? 'active' : ''%>>Forum</a></li>
+                <li><a href="/resources" class=<%= page === 'resources' ? 'active' : ''%>>Resources</a></li>
+                <li><a href="/members" class=<%= page === 'members' ? 'active' : ''%>>Members</a></li>
+            </ul>
+        </header>
+        <div id="main" class=<%=page%>>
 	

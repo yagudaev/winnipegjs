@@ -1,54 +1,56 @@
-	</div> <!-- main -->
-	<footer>
-		<div id="social_media">
-			<div>
-				<a href="http://www.linkedin.com/groups/Winnipegjs-4520628?home=&gid=4520628&trk=anet_ug_hm&goback=%2Egmp_4520628">
-					<img src="/images/linkedin-icon.png" alt="Join us on Linkedin" title="Join us on Linkedin" />
-				</a>
-				<span>Join our <a href="http://www.linkedin.com/groups/Winnipegjs-4520628?home=&gid=4520628&trk=anet_ug_hm&goback=%2Egmp_4520628">Group</a> on Linkedin</span>
-			</div>
-			<div>
-				<a href="http://twitter.com/winnipegjs">
-					<img src="/images/twitter-icon.png" alt="Follow us on Twitter" title="Follow us on Twitter" />
-				</a>
-				<span>Follow @<a href="http://twitter.com/winnipegjs">WinnipegJS</a> on Twitter</span>
-			</div>
-			<div>
-				<a href="http://github.com/yagudaev/winnipegjs">
-					<img src="/images/github-icon.png" alt="Contribute on Github" title="contribute on Github" />
-				</a>
-				<span>Contribute on <a href="http://github.com/yagudaev/winnipegjs">Github</a></span>
-			</div>
-		</div><!-- social_media -->
-		<div id="copyrights">
-			<div>
-				Developed by
-				<a href="http://www.yagudaev.com">Michael Yagudaev</a>
-			</div>
-			<div>
-				Mobile by
-				<a href="http://jacobfriesen.com/">Jacob Friesen</a>
-			</div>
-			<div>
-				Designed by
-				<a href="http://www.vadimbrodsky.com">Vadim Brodsky</a>
-			</div>
-		</div><!-- copyrights -->
-		
-		<!-- Reloads page with toDesktop get modifier so a mobile can view desktop pages from now on. If the mobile wants -->
-		<!-- to start viewing mobile pages again the ?toDesktop is just erased -->
-		<%
-		page = (page === 'index') ? '' : page;
-		if (!toDesktop) {
-		%>
-		<div class="transfer_link">
-			<a href="/set_desktop?to=true&page=#<%=page%>&title=#<%=title%>">Desktop Version</a>
-		</div>
-		<% } else { %>
-		<div class="transfer_link">
-			<a href="/set_desktop?to=false&page=#<%=page%>&title=#<%=title%>">Mobile Version</a>
-		</div>
-		<% } %>
-	</footer>
+        </div> <!-- main -->
+        <div id="footer_spacer"> </div>
+        <footer>
+            <div id="social_media">
+                <div>
+                    <a href="http://www.linkedin.com/groups/Winnipegjs-4520628?home=&gid=4520628&trk=anet_ug_hm&goback=%2Egmp_4520628">
+                        <img src="/images/linkedin-icon.png" alt="Join us on Linkedin" title="Join us on Linkedin" />
+                    </a>
+                    <span>Join our <a href="http://www.linkedin.com/groups/Winnipegjs-4520628?home=&gid=4520628&trk=anet_ug_hm&goback=%2Egmp_4520628">Group</a> on Linkedin</span>
+                </div>
+                <div>
+                    <a href="http://twitter.com/winnipegjs">
+                        <img src="/images/twitter-icon.png" alt="Follow us on Twitter" title="Follow us on Twitter" />
+                    </a>
+                    <span>Follow @<a href="http://twitter.com/winnipegjs">WinnipegJS</a> on Twitter</span>
+                </div>
+                <div>
+                    <a href="http://github.com/yagudaev/winnipegjs">
+                        <img src="/images/github-icon.png" alt="Contribute on Github" title="contribute on Github" />
+                    </a>
+                    <span>Contribute on <a href="http://github.com/yagudaev/winnipegjs">Github</a></span>
+                </div>
+            </div><!-- social_media -->
+            <div id="copyrights">
+                <div>
+                    Developed by
+                    <a href="http://www.yagudaev.com">Michael Yagudaev</a>
+                </div>
+                <div>
+                    Mobile by
+                    <a href="http://jacobfriesen.com/">Jacob Friesen</a>
+                </div>
+                <div>
+                    Designed by
+                    <a href="http://www.vadimbrodsky.com">Vadim Brodsky</a>
+                </div>
+            </div><!-- copyrights -->
+
+            <!-- Reloads page with toDesktop get modifier so a mobile can view desktop pages from now on. If the mobile wants -->
+            <!-- to start viewing mobile pages again the ?toDesktop is just erased -->
+            <%
+            page = (page === 'index') ? '' : page;
+            if (!toDesktop) {
+            %>
+            <div class="transfer_link">
+                <a href="/set_desktop?to=true&page=#<%=page%>&title=#<%=title%>">Desktop Version</a>
+            </div>
+            <% } else { %>
+            <div class="transfer_link">
+                <a href="/set_desktop?to=false&page=#<%=page%>&title=#<%=title%>">Mobile Version</a>
+            </div>
+            <% } %>
+        </footer>
+    </div> <!-- body-container -->
 </body>
 </html>
