@@ -266,8 +266,10 @@ footer {
             float: left;
             display: block;
             margin-right: 20px;
+            width: 100px;
+            height: auto;
         }
-        
+
         #main.events ul {
             list-style: none;
             padding: 0;
