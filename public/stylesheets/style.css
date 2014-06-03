@@ -261,11 +261,11 @@ footer {
     #main.events {
     }
         
-        #main.events img,
-        #main.event-page img {
+        #main.events img {
             float: left;
             display: block;
             margin-right: 20px;
+            margin-bottom: 15px;
             width: 100px;
             height: auto;
         }
@@ -291,6 +291,11 @@ footer {
             margin-left: 10px;
         }
         #main.event-page img {
+            float: left;
+            display: block;
+            margin-right: 20px;
+            width: 100px;
+            height: auto;
         }
         
         #main.event-page .map {
