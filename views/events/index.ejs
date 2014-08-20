@@ -1,63 +1,26 @@
 <% include ../top %>
 <% include event-scripts %>
 
-		<h1>Events</h1>
-		<p>If you have any suggestion do not hesitate to contact us at <a target="_blank" href="http://twitter.com/winnipegjs">@winnipegjs</a> or by email <a href="mailto:mail@peterbraun.ca">mail@peterbraun.ca</a>.</p>
-		
-		<ul class="events-list">
-            <li>
-                <h2><a href="/events/jun-18-2014">Sixth Meetup: "Microsoft <3 JavaScript" & "Introduction to Angular and Breeze"</a></h2>
-                <time datetime="2014-06-18">5:30pm Wed, June 18, 2014 @ SkullSpace</time>
-                <a href="/events/jun-18-2014"><img src="http://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"></a>
-                <p>
-                    This time we have two speakers: D'Arcy Lussier and Mike Sigsworth.
-                    At this event D'Arcy Lussier will tell us about Microsoft's new love for JavaScript and their support
-                    for open source JavaScript frameworks.
-                    Mike Sigsworth will show us how to develop applications using AngularJS, Breeze.js and Hot Towel.
-                </p>
-                <p> </p>
-            </li>
-            <li>
-                <h2><a href="/events/may-12-2014">Fifth Meetup: A New Vision</a></h2>
-                <time datetime="2014-05-12">7pm Mon, May 12, 2014 @ Canadian Tire Data Centre</time>
-                <a href="/events/may-12-2014"><img src="http://upload.wikimedia.org/wikipedia/en/thumb/1/13/Canadian_Tire_Logo.svg/189px-Canadian_Tire_Logo.svg.png"></a>
-                <p>
-                    Let's meetup again and bring this community back on track again. The JS related topic for this meetup is not yet
-                    determined and will be announced later but Adam Merrifield and Craig Haney from the Canadian Tire Innovations in
-                    Kitchener will talk about their vision for Winnipeg's developer community and Canadian Tire's new design studio.
-                </p>
-                <p>Let's get together, share our experiences, catch up and have simply fun hanging out.</p>
-            </li>
-			<li>
-				<h2><a href="/events/feb-20-2013">Fourth Meetup: Introduction to CoffeeScript</a></h2>
-				<time datetime="2013-02-20">Wednesday February 20th, 2013 @ UofM SmartPark</time>
-				<a href="/events/feb-20-2013"><img src="/images/coffeescript-logo.png"></a>
-				<p>CoffeeScript is a small language that compiles to Javascript that aims to solve many of the short comings of javascript (the bad parts). It makes it easier to write less code that does more in a simple and elegant way.</p>
-				<p>Kevin Quiring will be talking about CoffeeScript and how his team at Winnipeg Transit is using it to help them solve real problems.</p>
-			</li>
-			<li>
-				<h2><a href="/events/nov-21-2012">Third Meetup: Phonegap - Cross Platform Mobile Development</a></h2>
-				<time datetime="2012-11-21">Wednesday November 21th, 2012 @ UofM SmartPark</time>
-				<a href="/events/nov-21-2012"><img src="/images/phonegap-logo.png"></a>
-				<p>Phonegap is a platform that bridges the shortcomings of standard mobile web and native applications. It provides a standard API and tools to produce a compiled native application, while still using Javascript as our language of choice.</p>
-				<p>We will first discuss Mobile Web, see how far its come and see a simple demonstration of what it can do.  Then, we will move onto Phonegap, what problems it solves, how it can be extended and some caveats of the platform.</p>
-			</li>
-			<li>
-				<h2><a href="/events/oct-30-2012">Second Meetup: Test Driven Development</a></h2>
-				<time datetime="2012-10-30">Tuesday October 30th, 2012 @ UofM SmartPark</time>
-				<a href="/events/oct-30-2012"><img src="/images/jasmin-logo.png"></a>
-				<p>Test Driven Development is software development methodology based on "test first" approach.</p>
-				<p>That means that before even writing a line of code we need to write a test for it. </p>
-				<p>The idea seems fine for languages like C# however what about Javascript? Javascript is quite a popular language (if not the most) so, are we condemned to test the UI every time I want to test my JS code? Why can't we do TDD with it?</p>
-				<p>Of course we can! Join me on a session to discuss how to start with Jasmine, a JS library for testing in general, that provides great syntax to use TDD. I assure you your JS code will never be the same!</p>
-			</li>
-			<li>
-				<h2><a href="/events/sep-26-2012">First Meetup: Intro to Node.js</a></h2>
-				<time datetime="2012-09-26 18:00">6pm Wednesday, September 26, 2012 @ UofM Smart Park</time>
-				<a href="/events/sep-26-2012"><img src="/images/nodejs-logo.jpg"></a>
-				<p>We decided to do our first meeting about one of the hottest topics in the development world </p>
-				<p>We will start with a quick introduction to Node.js and then go over a few uses of Node.js and when not to use it. We will then dive into a few popular frameworks and see what each is good for and which you should use for your projects. <a href="/events/sep-26-2012">More</a></p>
-			</li>
-		</ul>
+<h1>Events</h1>
+<p>If you have any suggestion do not hesitate to contact us at <a target="_blank" href="http://twitter.com/winnipegjs">@winnipegjs</a> or by email <a href="mailto:mail@peterbraun.ca">mail@peterbraun.ca</a>.</p>
+
+<ul class="events-list">
+	<% var event = {}; for(var slug in events) { event = events[ slug ]; %>
+	<li>
+		<h2><a href="/events/<%= slug %>"><%= event.title %></a></h2>
+		<time datetime="<%= event.date %>"><%=: event.date | moment:'h:mma ddd, MMMM Do, YYYY' %> @ <%= event.location %></time>
+		<a href="/events/<%= slug %>">
+			<img alt="<%= event.thumbAltText %>" src="<%= event.thumbnail %>">
+		</a>
+
+		<% synopsisField = event.hasOwnProperty('synopsis') ? 'synopsis' : 'description'; %>
+		<% for(var j=0; j<event[ synopsisField ].length; j++) { %>
+		<p>
+			<%= event[ synopsisField ][ j ] %>
+		</p>
+		<% } %>
+	</li>
+	<% } %>
+</ul>
 
 <% include ../bottom %>

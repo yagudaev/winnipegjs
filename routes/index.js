@@ -3,7 +3,32 @@ var EVENT_PAGE_NAME = 'event-page';
 var EVENT_PRE_TITLE = "Event ";
 
 var fs = require('fs'),
+  moment = require('moment'),
+  ejs = require('ejs'),
+  marked = require('marked'),
   path = require('path');
+
+ejs.filters.moment = function(date, formatString) {
+	if ( 'TBD' === date ) {
+		return date;
+	} else {
+		return moment(date).format(formatString);
+	}
+};
+
+function getEventData() {
+	eventData = require('../views/events/events.json');
+
+	return eventData;
+}
+
+function thisIsAnUpcoming(event) {
+	return ! moment(event.date).isBefore(moment().format('YYYY-MM-DD'));
+}
+
+function getContentFor(event) {
+	return marked(fs.readFileSync(__dirname + '/../views/events/' + event.slug + '.md', "utf8"));
+}
 
 /*
  * GET home page.
@@ -14,7 +39,14 @@ exports.index = function(req, res) {
 };
 
 exports.events = function(req, res) {
-  res.render('events/index', { title: 'Events', page: 'events', toDesktop: toDesktop(req) });
+	locals = {
+		title: 'Events',
+		page: 'events',
+		toDesktop: toDesktop(req),
+		events: getEventData()
+	};
+
+	res.render('events/index', locals);
 };
 
 exports.resources = function(req, res) {
@@ -30,29 +62,35 @@ exports.forum = function(req, res) {
 };
 
 exports.eventPage = function(req, res) {
-  // don't allow directory traversal
-  var page = 'events/' + req.params.date.replace(/\.\.|\./, ' ');
+	var eventSlug = req.params.date,
+		event = getEventData()[eventSlug];
 
-  // do not allow the layout page to be rendered by itself
-  if (page === 'events/layout' || page === 'events/index')
-    return res.status(404).render('404', { title: 'Page not Found 404', page: '404', toDesktop: toDesktop(req)});
+	event.isUpcoming = thisIsAnUpcoming(event);
+	event.slug = eventSlug;
+	event.content = getContentFor(event);
 
-  fs.exists(path.normalize(__dirname + '/../views/' + page + '.ejs'), function(exists) {
-    if (exists) {
-      res.render(page, { title: EVENT_PRE_TITLE + req.params.date, page: EVENT_PAGE_NAME, toDesktop: toDesktop(req)});
-    } else {
-      res.status(404).render('404', { title: 'Page not Found 404', page: '404', toDesktop: toDesktop(req)});
-    }
-  });
+	var location = require('../views/events/locations.json')[ event.location ];
 
-}
+	if (req.params.date in eventData) {
+		var locals = {
+			title: EVENT_PRE_TITLE + req.params.date,
+			page: EVENT_PAGE_NAME,
+			toDesktop: toDesktop(req),
+			event: event,
+			location: location
+		};
+		res.render('events/event', locals);
+	} else {
+		res.status(404).render('404', { title: 'Page not Found 404', page: '404', toDesktop: toDesktop(req)});
+	}
+};
 
 // Sets a cookie in the users browser specifying they or don't want the desktop interface (for mobile only).
 // Not going to call any of the functions above as that would rely on none of them changing names later.
 exports.setDesktop = function(req, res) {
   var page = req.query.page;
 
-  if (page == null || page === '') {
+  if (page === null || page === '') {
     page = 'index';
   }
 
@@ -65,7 +103,7 @@ exports.setDesktop = function(req, res) {
   // set toDesktop cookie so subsequent pages know whether to render a desktop version for mobile or not
   res.cookie('desktop_interface', req.query.to + '', {maxAge: 86400000});// day in milleseconds
   res.render(page, { title: req.query.title, page: page, toDesktop: req.query.to == 'true' ? true : false});
-}
+};
 
 // Checks if a desktop interface is requested (via a cookie)
 function toDesktop(req){

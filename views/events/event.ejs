@@ -1,0 +1,28 @@
+<% include ../top %>
+<% include event-scripts %>
+
+
+<% include google-map %>
+<div class="description">
+	<h1><%= event.title %></h1>
+	<time datetime="<%= event.date %>"><%=: event.date | moment:'h:mma ddd, MMMM Do, YYYY' %> @ <%= event.location %></time>
+	<% if(event.isUpcoming) { %>
+		<% if (event.hasOwnProperty('eventbrite')) { %>
+		<p>Please RSVP to the event using Eventbrite using this link: <a href="<%= event.eventbrite %>"><%= event.eventbrite %></a>.</p>
+		<% } else { %>
+		<p style="font-style: italic">Eventbrite has not yet been set up. Keep an eye on your inbox for an invite to RSVP.</p>
+		<% } %>
+	<% } %>
+
+	<%- event.content %>
+
+
+	<% if (event.isUpcoming) { %>
+	<div class="footnote">
+		<p>Note: the exact topics will be subject to change due to time and other considerations. If you have other ideas for talks, or want to tell us what we *must* cover contact us on twitter <a href="http://www.twitter.com/winnipegjs">@winnipegjs</a>.</p>
+		<p>Remember to RSVP to the event if you are planning on attending. Hope to see you all there!</p>
+	</div>
+	<% } %>
+</div>
+
+<% include ../bottom %>

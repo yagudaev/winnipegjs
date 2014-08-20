@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -6,16 +5,11 @@
 var express = require('express'),
     routes = require('./routes'),
     http = require('http'),
-    path = require('path'),
-    ejs = require('ejs');
+    path = require('path');
 
 var app = express();
 
 app.configure(function(){
-  // change ejs delimiters to mustache style delimiters
-  ejs.open = '<%';
-  ejs.close = '%>';
-  
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');

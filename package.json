@@ -10,7 +10,9 @@
     "start": "node app"
   },
   "dependencies": {
+    "ejs": "0.8.x",
     "express": "3.0.0rc1",
-    "ejs": "0.8.x"
+    "marked": "^0.3.2",
+    "moment": "^2.8.1"
   }
 }

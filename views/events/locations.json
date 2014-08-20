@@ -1,0 +1,30 @@
+{
+	"UofM SmartPark": {
+		"iframeSrc": "https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=49.802578,-97.149136&amp;output=embed",
+		"mapLink": "https://maps.google.ca/maps?q=1+Research+Road,+Winnipeg,+MB&amp;hl=en&amp;ll=49.802804,-97.147121&amp;spn=0.008587,0.020213&amp;sll=49.853822,-97.152225&amp;sspn=0.791562,2.113495&amp;oq=1+Research+Road,+&amp;hnear=1+Research+Rd,+Winnipeg,+Manitoba+R3T+6E3&amp;t=m&amp;z=16",
+		"address": [
+			"Smart Park Event Center - 2nd floor",
+			"1 Research Rd",
+			"Winnipeg, MB R3T 6E3"
+		]
+	},
+	"Canadian Tire Data Centre": {
+		"iframeSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d642.565917983129!2d-97.14591605307548!3d49.89385292239576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea7158f81f09c1%3A0xcb3fd043d0d6fff5!2s355+Portage+Ave!5e0!3m2!1sen!2sca!4v1399258262026",
+		"mapLink": "https://www.google.ca/maps/place/355+Portage+Ave/@49.8938529,-97.1459161,19z/data=!4m2!3m1!1s0x52ea7158f81f09c1:0xcb3fd043d0d6fff5",
+		"address": [
+			"Canadian Tire Data Centre",
+			"355 Portage Ave",
+			"Winnipeg, MB R3B 2C3",
+			"(In the Air Canada Building Downtown)"
+		]
+	},
+	"SkullSpace": {
+		"iframeSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.1493682210607!2d-97.14425899999998!3d49.89599899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7cfd9ef8b9600239!2sSkullspace!5e0!3m2!1sen!2sca!4v1401653534571",
+		"mapLink": "https://www.google.ca/maps/place/Skullspace/@49.895999,-97.144259,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x7cfd9ef8b9600239",
+		"address": [
+			"SkullSpace",
+			"374 Donald St",
+			"Winnipeg, MB R3B 2J2"
+		]
+	}
+}

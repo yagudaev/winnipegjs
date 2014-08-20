@@ -1,0 +1,28 @@
+<div class="map">
+	<iframe
+		width="425"
+		height="350"
+		frameborder="0"
+		scrolling="no"
+		marginheight="0"
+		marginwidth="0"
+		style="border:0"
+	    	src="<%= location.iframeSrc %>"
+	></iframe>
+	<br />
+
+	<small>
+		<a href="<%= location.mapLink %>" style="color:#0000FF;text-align:left">View Larger Map</a>
+	</small>
+
+	<div>
+		<b>Location:</b>
+		<div>
+			<a href="<%= location.mapLink %>">
+				<% for(var i=0; i<location.address.length; i++) { %>
+					<%= location.address[ i ] %><br >
+				<% } %>
+			</a>
+		</div>
+	</div>
+</div>

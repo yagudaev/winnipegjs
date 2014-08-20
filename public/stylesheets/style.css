@@ -366,3 +366,9 @@ div.transfer_link{
         color: white;
     }
 }
+
+.description .footnote {
+	border-top: 1px solid #ddd;
+	padding-top: 20px;
+	font-size: .9em;
+}
