@@ -2,10 +2,10 @@
 <% include event-scripts %>
 
 
-<% include google-map %>
+<% include _google-map %>
 <div class="description">
 	<h1><%= event.title %></h1>
-	<time datetime="<%= event.date %>"><%=: event.date | moment:'h:mma ddd, MMMM Do, YYYY' %> @ <%= event.location %></time>
+	<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @ <%= event.location %></time>
 	<% if(event.isUpcoming) { %>
 		<% if (event.hasOwnProperty('eventbrite')) { %>
 		<p>Please RSVP to the event using Eventbrite using this link: <a href="<%= event.eventbrite %>"><%= event.eventbrite %></a>.</p>

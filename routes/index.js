@@ -8,11 +8,11 @@ var fs = require('fs'),
   marked = require('marked'),
   path = require('path');
 
-ejs.filters.moment = function(date, formatString) {
-	if ( 'TBD' === date ) {
+ejs.filters.formatDate = function(date) {
+	if ('TBD' === date) {
 		return date;
 	} else {
-		return moment(date).format(formatString);
+		return moment(date).format('h:mma ddd, MMMM Do, YYYY');
 	}
 };
 
@@ -22,7 +22,7 @@ function getEventData() {
 	return eventData;
 }
 
-function thisIsAnUpcoming(event) {
+function isAnUpcomingEvent(event) {
 	return ! moment(event.date).isBefore(moment().format('YYYY-MM-DD'));
 }
 
@@ -39,14 +39,7 @@ exports.index = function(req, res) {
 };
 
 exports.events = function(req, res) {
-	locals = {
-		title: 'Events',
-		page: 'events',
-		toDesktop: toDesktop(req),
-		events: getEventData()
-	};
-
-	res.render('events/index', locals);
+	res.render('events/index', { title: 'Events', page: 'events', toDesktop: toDesktop(req), events: getEventData() });
 };
 
 exports.resources = function(req, res) {
@@ -65,11 +58,11 @@ exports.eventPage = function(req, res) {
 	var eventSlug = req.params.date,
 		event = getEventData()[eventSlug];
 
-	event.isUpcoming = thisIsAnUpcoming(event);
+	event.isUpcoming = isAnUpcomingEvent(event);
 	event.slug = eventSlug;
 	event.content = getContentFor(event);
 
-	var location = require('../views/events/locations.json')[ event.location ];
+	var location = require('../views/events/locations.json')[event.location];
 
 	if (req.params.date in eventData) {
 		var locals = {
@@ -90,7 +83,7 @@ exports.eventPage = function(req, res) {
 exports.setDesktop = function(req, res) {
   var page = req.query.page;
 
-  if (page === null || page === '') {
+  if (! page) {
     page = 'index';
   }
 
