@@ -1,3 +1,14 @@
+---
+slug: sep-2014
+title: "Seventh Meetup: Creating Automating and Testing"
+date: TBD
+thumbnail: http://upload.wikimedia.org/wikipedia/en/thumb/1/13/Canadian_Tire_Logo.svg/189px-Canadian_Tire_Logo.svg.png
+thumbAltText: Canadian Tire
+location: Canadian Tire Data Centre
+synopsis:
+  - Come join us for back to school action at the Canadian Tire Innovation Centre. We will try to have three shorter talks with pizza and networking breaks in between.
+---
+
 ![CreateJS](/images/createjs.png "CreateJS")
 ![HTML 5 Canvas](/images/canvas.png "HTML 5 Canvas")
 

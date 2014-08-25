@@ -1,3 +1,16 @@
+---
+slug: feb-20-2013
+title: "Fourth Meetup: Introduction to CoffeeScript"
+date: 2013-02-20 18:00
+thumbnail: /images/coffeescript-logo.png
+thumbAltText: CoffeeScript
+eventbrite: http://www.eventbrite.com/event/5515131908
+location: UofM SmartPark
+synopsis:
+  - CoffeeScript is a small language that compiles to Javascript that aims to solve many of the short comings of javascript (the bad parts). It makes it easier to write less code that does more in a simple and elegant way.
+  - Kevin Quiring will be talking about CoffeeScript and how his team at Winnipeg Transit is using it to help them solve real problems.
+---
+
 ![CoffeeScript](/images/coffeescript-logo.png "CoffeeScript")
 CoffeeScript is a small language that compiles to Javascript that aims to solve many of the short comings of javascript (the bad parts). It makes it easier to write less code that does more in a simple and elegant way.
 

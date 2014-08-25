@@ -1,3 +1,18 @@
+---
+slug: oct-30-2012
+title: "Second Meetup: Test Driven Development"
+date: 2012-10-30 18:00
+thumbnail: /images/jasmin-logo.png
+thumbAltText: Jasmine
+eventbrite: http://www.eventbrite.com/event/4657304122
+location: UofM SmartPark
+synopsis:
+  - Test Driven Development is software development methodology based on "test first" approach.
+  - That means that before even writing a line of code we need to write a test for it.
+  - The idea seems fine for languages like C# however what about Javascript? Javascript is quite a popular language (if not the most) so, are we condemned to test the UI every time I want to test my JS code? Why can't we do TDD with it?
+  - Of course we can! Join me on a session to discuss how to start with Jasmine, a JS library for testing in general, that provides great syntax to use TDD. I assure you your JS code will never be the same!
+---
+
 ![Jasmine](/images/jasmin-logo.png "Jasmine")
 Test Driven Development is software development methodology based on "test first" approach.
 

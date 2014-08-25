@@ -5,7 +5,8 @@ var EVENT_PRE_TITLE = "Event ";
 var fs = require('fs'),
   moment = require('moment'),
   ejs = require('ejs'),
-  marked = require('marked'),
+  marked = require('meta-marked'),
+  extend = require('lodash').extend,
   path = require('path');
 
 ejs.filters.formatDate = function(date) {
@@ -16,8 +17,21 @@ ejs.filters.formatDate = function(date) {
 	}
 };
 
+function isEventFile(filename) {
+	return '.md' === path.extname(filename);
+}
+
 function getEventData() {
-	eventData = require('../views/events/events.json');
+	var eventFiles = fs.readdirSync(__dirname + '/../views/events/').filter(isEventFile).reverse(),
+		event = {},
+		eventData = {};
+
+	eventFiles.forEach(function(eventFilename) {
+		event = getContentFor(eventFilename);
+		extend(event, event.meta);
+		event.isUpcoming = isAnUpcomingEvent(event);
+		eventData[event.slug] = event;
+	});
 
 	return eventData;
 }
@@ -26,8 +40,8 @@ function isAnUpcomingEvent(event) {
 	return ! moment(event.date).isBefore(moment().format('YYYY-MM-DD'));
 }
 
-function getContentFor(event) {
-	return marked(fs.readFileSync(__dirname + '/../views/events/' + event.slug + '.md', "utf8"));
+function getContentFor(eventFilename) {
+	return marked(fs.readFileSync(__dirname + '/../views/events/' + eventFilename, "utf8"));
 }
 
 /*
@@ -55,24 +69,16 @@ exports.forum = function(req, res) {
 };
 
 exports.eventPage = function(req, res) {
-	var eventSlug = req.params.date,
-		event = getEventData()[eventSlug];
-
-	event.isUpcoming = isAnUpcomingEvent(event);
-	event.slug = eventSlug;
-	event.content = getContentFor(event);
-
-	var location = require('../views/events/locations.json')[event.location];
+	var eventData = getEventData();
 
 	if (req.params.date in eventData) {
-		var locals = {
-			title: EVENT_PRE_TITLE + req.params.date,
-			page: EVENT_PAGE_NAME,
-			toDesktop: toDesktop(req),
-			event: event,
-			location: location
-		};
-		res.render('events/event', locals);
+		var eventSlug = req.params.date,
+			event = getEventData()[eventSlug];
+
+
+		var location = require('../views/events/locations.json')[event.location];
+
+		res.render('events/event', { title: EVENT_PRE_TITLE + req.params.date, page: EVENT_PAGE_NAME, toDesktop: toDesktop(req), event: event, location: location });
 	} else {
 		res.status(404).render('404', { title: 'Page not Found 404', page: '404', toDesktop: toDesktop(req)});
 	}

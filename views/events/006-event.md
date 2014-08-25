@@ -1,3 +1,15 @@
+---
+slug: jun-18-2014
+title: "Sixth Meetup: Microsoft <3 Javascript & Introduction to Angular and Breeze"
+date: 2014-06-18 17:30
+thumbnail: http://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg
+thumbAltText: JavaScript
+eventbrite: http://www.eventbrite.com/e/sixth-meetup-microsoft-3-javascript-intro-to-angular-and-breeze-tickets-11818823419
+location: SkullSpace
+synopsis:
+  - "This time we have two speakers: D'Arcy Lussier and Mike Sigsworth. At this event D'Arcy Lussier will tell us about Microsoft's new love for JavaScript and their support for open source JavaScript frameworks. Mike Sigsworth will show us how to develop applications using AngularJS, Breeze.js and Hot Towel."
+---
+
 Of course, pizza and beverages will be provided, as always :-)
 
 ![Microsoft](http://img1.wikia.nocookie.net/__cb20130407135643/logopedia/images/4/44/Microsoft_logo.svg "Microsoft")
