@@ -89,7 +89,7 @@ exports.eventPage = function(req, res) {
 exports.setDesktop = function(req, res) {
   var page = req.query.page;
 
-  if (! page) {
+  if (!page) {
     page = 'index';
   }
 

@@ -13,11 +13,9 @@
 			<img alt="<%= event.thumbAltText %>" src="<%= event.thumbnail %>">
 		</a>
 
-		<% for(var j = 0; j < event['synopsis'].length; j++) { %>
-		<p>
-			<%- event['synopsis'][j] %>
-		</p>
-		<% } %>
+		<% event.synopsis.forEach( function( paragraph ) { %>
+			<p><%- paragraph %></p>
+		<% } ); %>
 	</li>
 	<% } %>
 </ul>
