@@ -1,12 +1,16 @@
 ---
-slug: sep-2014
-title: "Seventh Meetup: Creating Automating and Testing"
 date: TBD
-thumbnail: http://upload.wikimedia.org/wikipedia/en/thumb/1/13/Canadian_Tire_Logo.svg/189px-Canadian_Tire_Logo.svg.png
-thumbAltText: Canadian Tire
-location: Canadian Tire Data Centre
-synopsis:
-  - Come join us for back to school action at the Canadian Tire Innovation Centre. We will try to have three shorter talks with pizza and networking breaks in between.
+location: 
+  long: 
+    - "355 Portage Ave"
+    - "Winnipeg, MB R3B 2C3"
+  short: "Canadian Tire Data Centre (In the Air Canada Building Downtown)"
+slug: sep-2014
+synopsis: 
+  - "Come join us for back to school action at the Canadian Tire Innovation Centre. We will try to have three shorter talks with pizza and networking breaks in between."
+thumbAltText: "Canadian Tire"
+thumbnail: "http://upload.wikimedia.org/wikipedia/en/thumb/1/13/Canadian_Tire_Logo.svg/189px-Canadian_Tire_Logo.svg.png"
+title: "Seventh Meetup: Creating Automating and Testing"
 ---
 
 ![CreateJS](/images/createjs.png "CreateJS")

@@ -8,14 +8,14 @@
 	<% var event = {}; for(var slug in events) { event = events[slug]; %>
 	<li>
 		<h2><a href="/events/<%= slug %>"><%= event.title %></a></h2>
-		<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @ <%= event.location %></time>
+		<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @ <%= event.location.short %></time>
 		<a href="/events/<%= slug %>">
 			<img alt="<%= event.thumbAltText %>" src="<%= event.thumbnail %>">
 		</a>
 
-		<% event.synopsis.forEach( function( paragraph ) { %>
+		<% event.synopsis.forEach(function(paragraph) { %>
 			<p><%- paragraph %></p>
-		<% } ); %>
+		<% }); %>
 	</li>
 	<% } %>
 </ul>

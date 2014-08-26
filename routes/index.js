@@ -76,9 +76,7 @@ exports.eventPage = function(req, res) {
 			event = getEventData()[eventSlug];
 
 
-		var location = require('../views/events/locations.json')[event.location];
-
-		res.render('events/event', { title: EVENT_PRE_TITLE + req.params.date, page: EVENT_PAGE_NAME, toDesktop: toDesktop(req), event: event, location: location });
+		res.render('events/event', { title: EVENT_PRE_TITLE + req.params.date, page: EVENT_PAGE_NAME, toDesktop: toDesktop(req), event: event });
 	} else {
 		res.status(404).render('404', { title: 'Page not Found 404', page: '404', toDesktop: toDesktop(req)});
 	}

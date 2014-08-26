@@ -1,3 +1,4 @@
+<% var mapQuery = encodeURIComponent(event.location.long.join(', ')); %>
 <div class="map">
 	<iframe
 		width="425"
@@ -7,21 +8,20 @@
 		marginheight="0"
 		marginwidth="0"
 		style="border:0"
-	    	src="<%= location.iframeSrc %>"
+		src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBfOTa5huO2uxW8KKsDl3S-d8sLYNbShVk&q=<%= mapQuery %>"
 	></iframe>
 	<br />
 
 	<small>
-		<a href="<%= location.mapLink %>" style="color:#0000FF;text-align:left">View Larger Map</a>
+		<a href="https://www.google.ca/maps/?q=<%= mapQuery %>" style="color:#0000FF;text-align:left">View Larger Map</a>
 	</small>
 
 	<div>
 		<b>Location:</b>
 		<div>
-			<a href="<%= location.mapLink %>">
-				<% for(var i = 0; i < location.address.length; i++) { %>
-					<%= location.address[i] %><br >
-				<% } %>
+			<a href="https://www.google.ca/maps/?q=<%= mapQuery %>">
+				<%= event.location.short %><br>
+				<%- event.location.long.join('<br>') %>
 			</a>
 		</div>
 	</div>

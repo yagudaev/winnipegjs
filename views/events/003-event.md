@@ -1,14 +1,18 @@
 ---
+date: "2012-11-21 18:00"
+eventbrite: "http://www.eventbrite.com/event/4841163049"
+location: 
+  long: 
+    - "1 Research Rd"
+    - "Winnipeg, MB R3T 6E3"
+  short: "UofM SmartPark - 2nd floor"
 slug: nov-21-2012
-title: "Third Meetup: Phonegap - Cross Platform Mobile Development"
-date: 2012-11-21 18:00
-thumbnail: /images/phonegap-logo.png
+synopsis: 
+  - "Phonegap is a platform that bridges the shortcomings of standard mobile web and native applications. It provides a standard API and tools to produce a compiled native application, while still using Javascript as our language of choice."
+  - "We will first discuss Mobile Web, see how far its come and see a simple demonstration of what it can do. Then, we will move onto Phonegap, what problems it solves, how it can be extended and some caveats of the platform."
 thumbAltText: PhoneGap
-eventbrite: http://www.eventbrite.com/event/4841163049
-location: UofM SmartPark
-synopsis:
-  - Phonegap is a platform that bridges the shortcomings of standard mobile web and native applications. It provides a standard API and tools to produce a compiled native application, while still using Javascript as our language of choice.
-  - We will first discuss Mobile Web, see how far its come and see a simple demonstration of what it can do. Then, we will move onto Phonegap, what problems it solves, how it can be extended and some caveats of the platform.
+thumbnail: /images/phonegap-logo.png
+title: "Third Meetup: Phonegap - Cross Platform Mobile Development"
 ---
 
 ![PhoneGap](/images/phonegap-logo.png "PhoneGap")
