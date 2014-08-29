@@ -1,0 +1,28 @@
+<% var mapQuery = encodeURIComponent(event.location.long.join(', ')); %>
+<div class="map">
+	<iframe
+		width="425"
+		height="350"
+		frameborder="0"
+		scrolling="no"
+		marginheight="0"
+		marginwidth="0"
+		style="border:0"
+		src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBfOTa5huO2uxW8KKsDl3S-d8sLYNbShVk&q=<%= mapQuery %>"
+	></iframe>
+	<br />
+
+	<small>
+		<a href="https://www.google.ca/maps/?q=<%= mapQuery %>" style="color:#0000FF;text-align:left">View Larger Map</a>
+	</small>
+
+	<div>
+		<b>Location:</b>
+		<div>
+			<a href="https://www.google.ca/maps/?q=<%= mapQuery %>">
+				<%= event.location.short %><br>
+				<%- event.location.long.join('<br>') %>
+			</a>
+		</div>
+	</div>
+</div>
