@@ -22,10 +22,11 @@ function isEventFile(filename) {
 }
 
 function getEventData() {
-	var eventFiles = fs.readdirSync(__dirname + '/../views/events/').filter(isEventFile).reverse(),
+	var eventFiles = fs.readdirSync(__dirname + '/../views/events/').filter(isEventFile),
 		event = {},
 		eventData = {};
 
+  eventFiles.sort(function(a, b) { return a < b });
 	eventFiles.forEach(function(eventFilename) {
 		event = getContentFor(eventFilename);
 		extend(event, event.meta);
