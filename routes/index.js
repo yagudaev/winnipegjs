@@ -2,12 +2,9 @@
 var EVENT_PAGE_NAME = 'event-page';
 var EVENT_PRE_TITLE = "Event ";
 
-var fs = require('fs'),
-  moment = require('moment'),
+var moment = require('moment'),
   ejs = require('ejs'),
-  marked = require('meta-marked'),
-  extend = require('lodash').extend,
-  path = require('path');
+  eventLoader = require('./../lib/eventLoader');
 
 ejs.filters.formatDate = function(date) {
 	if ('TBD' === date) {
@@ -16,34 +13,6 @@ ejs.filters.formatDate = function(date) {
 		return moment(date).format('h:mma ddd, MMMM Do, YYYY');
 	}
 };
-
-function isEventFile(filename) {
-	return '.md' === path.extname(filename);
-}
-
-function getEventData() {
-	var eventFiles = fs.readdirSync(__dirname + '/../views/events/').filter(isEventFile),
-		event = {},
-		eventData = {};
-
-  eventFiles.sort(function(a, b) { return a < b });
-	eventFiles.forEach(function(eventFilename) {
-		event = getContentFor(eventFilename);
-		extend(event, event.meta);
-		event.isUpcoming = isAnUpcomingEvent(event);
-		eventData[event.slug] = event;
-	});
-
-	return eventData;
-}
-
-function isAnUpcomingEvent(event) {
-	return ! moment(event.date).isBefore(moment().format('YYYY-MM-DD'));
-}
-
-function getContentFor(eventFilename) {
-	return marked(fs.readFileSync(__dirname + '/../views/events/' + eventFilename, "utf8"));
-}
 
 /*
  * GET home page.
@@ -54,7 +23,7 @@ exports.index = function(req, res) {
 };
 
 exports.events = function(req, res) {
-	res.render('events/index', { title: 'Events', page: 'events', toDesktop: toDesktop(req), events: getEventData() });
+	res.render('events/index', { title: 'Events', page: 'events', toDesktop: toDesktop(req), events: eventLoader.getData() });
 };
 
 exports.resources = function(req, res) {
@@ -70,11 +39,11 @@ exports.forum = function(req, res) {
 };
 
 exports.eventPage = function(req, res) {
-	var eventData = getEventData();
+	var eventData = eventLoader.getData();
 
 	if (req.params.date in eventData) {
 		var eventSlug = req.params.date,
-			event = getEventData()[eventSlug];
+			event = eventData[eventSlug];
 
 
 		res.render('events/event', { title: EVENT_PRE_TITLE + req.params.date, page: EVENT_PAGE_NAME, toDesktop: toDesktop(req), event: event });
