@@ -5,11 +5,11 @@
 <p>If you have any suggestion do not hesitate to contact us at <a target="_blank" href="http://twitter.com/winnipegjs">@winnipegjs</a> or by email <a href="mailto:mail@peterbraun.ca">mail@peterbraun.ca</a>.</p>
 
 <ul class="events-list">
-	<% var event = {}; for(var slug in events) { event = events[slug]; %>
+	<% for(var slug in events) { var event = events[slug]; %>
 	<li>
-		<h2><a href="/events/<%= slug %>"><%= event.title %></a></h2>
+		<h2><a href="/events/<%= event.slug %>"><%= event.title %></a></h2>
 		<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @ <%= event.location.short %></time>
-		<a href="/events/<%= slug %>">
+		<a href="/events/<%= event.slug %>">
 			<img alt="<%= event.thumbAltText %>" src="<%= event.thumbnail %>">
 		</a>
 

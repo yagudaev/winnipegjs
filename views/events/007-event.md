@@ -10,7 +10,7 @@ synopsis:
   - "Come join us for back to school action at the Canadian Tire Innovation Centre. We will try to have three shorter talks with pizza and networking breaks in between."
 thumbAltText: "Canadian Tire"
 thumbnail: "http://upload.wikimedia.org/wikipedia/en/thumb/1/13/Canadian_Tire_Logo.svg/189px-Canadian_Tire_Logo.svg.png"
-title: "Seventh Meetup: Creating Automating and Testing"
+title: "Seventh Meetup: Creating, Automating and Testing"
 ---
 
 ![CreateJS](/images/createjs.png "CreateJS")

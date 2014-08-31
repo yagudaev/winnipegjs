@@ -19,7 +19,7 @@ ejs.filters.formatDate = function(date) {
  */
 
 exports.index = function(req, res) {
-  res.render('index', { title: 'Winnipeg.js', page: 'index', toDesktop: toDesktop(req) });
+	res.render('index', { title: 'Winnipeg.js', page: 'index', toDesktop: toDesktop(req), upcomingEvent: eventLoader.getUpcomingEvent() });
 };
 
 exports.events = function(req, res) {
@@ -68,11 +68,11 @@ exports.setDesktop = function(req, res) {
   }
 
   // set toDesktop cookie so subsequent pages know whether to render a desktop version for mobile or not
-  res.cookie('desktop_interface', req.query.to + '', {maxAge: 86400000});// day in milleseconds
-  res.render(page, { title: req.query.title, page: page, toDesktop: req.query.to == 'true' ? true : false});
+  res.cookie('desktop_interface', req.query.to + '', { maxAge: 86400000 });// day in milleseconds
+  res.render(page, { title: req.query.title, page: page, toDesktop: req.query.to == 'true'});
 };
 
 // Checks if a desktop interface is requested (via a cookie)
 function toDesktop(req){
-  return req.cookies.desktop_interface == 'true' ? true : false;
+  return req.cookies.desktop_interface == 'true';
 }
