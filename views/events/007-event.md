@@ -1,5 +1,6 @@
 ---
-date: TBD
+date: 2014-09-22 18:00
+eventbrite: http://www.meetup.com/Winnipeg-js/events/203855332/
 location: 
   long: 
     - "355 Portage Ave"
@@ -26,7 +27,7 @@ TBA
 About the Speaker
 -----------------
 
-TBA
+Travis Scott
 
 ![MeteorJS](/images/meteorjs.png "MeteorJS")
 ![Raspberry Pi](http://www.raspberrypi.org/wp-content/uploads/2012/03/Raspi_Colour_R.png "Raspberry Pi")
@@ -40,10 +41,10 @@ A cool project connecting Meteor to Raspberry pi's to automate and update garden
 
 &nbsp;
 
-About the Speakers
+About the Speaker
 -----------------
 
-TBA
+Denny Scott
 
 ![CasperJS](http://casperjs.org/images/casperjs-logo.png "CasperJS")
 ![CoffeeScript](/images/coffeescript-logo.png "CoffeeScript")
@@ -53,7 +54,7 @@ It's a ghost town in there
 
 CasperJS is a browser automation and testing framework built on top of phantomjs.
 
-Let's have a conversation about how and when we've used automated browser testing, and share lessons learned.
+Let's have a conversation about how and when we're using automated browser testing, and share lessons learned.
 
 &nbsp;
 
@@ -67,4 +68,4 @@ Dan Bernardic enjoys collaboration and knowledge sharing. He is passionate about
 Dan enjoys writing code that resembles english and has been exploring venues for how to get more expressive and self-documenting programs for the past two years.
 
 When not in front of a computer, he enjoys face painting kids and making them balloon animals when he is out and about with his daughter.
-[Contact & more info](http://en.gravatar.com/dbernar1 "Dan Bernardic's Gravatar Profile")
+[Online profile](http://en.gravatar.com/dbernar1 "Dan Bernardic's Gravatar Profile")
