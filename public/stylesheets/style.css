@@ -188,8 +188,10 @@ footer {
     }
 
 #main {
-    padding: 10px 25px;
+    max-width: 1200px;
     min-height: 75%;
+    margin: 0 auto;
+    padding: 10px 25px;
 }
 
     #main.index {
@@ -259,6 +261,7 @@ footer {
         }
         
     #main.events {
+        max-width: 800px;
     }
         
         #main.events img {
@@ -312,6 +315,7 @@ footer {
         }
 
     #main.resources {
+        max-width: 800px;
     }
 
         #main.resources h2.section{
@@ -365,4 +369,10 @@ div.transfer_link{
 	div.transfer_link > a{
         color: white;
     }
+}
+
+.description .footnote {
+	border-top: 1px solid #ddd;
+	padding-top: 20px;
+	font-size: .9em;
 }
