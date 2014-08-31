@@ -68,12 +68,11 @@
                 <a href="/">(Winnipeg.js);</a>
             </div>
             <ul id="nav">
-                <li><a href="/" <%= page === 'index' ? 'class=active' : ''%>>Home</a></li>
-                <li><a href="/events" <%= page === 'events' ? 'class=active' : ''%>>Events</a></li>
-                <li><a href="/forum" <%= page === 'forum' ? 'class=active' : ''%>>Forum</a></li>
-                <li><a href="/resources" <%= page === 'resources' ? 'class=active' : ''%>>Resources</a></li>
-                <li><a href="/members" <%= page === 'members' ? 'class=active' : ''%>>Members</a></li>
+                <li><a href="/" class=<%= page === 'index' ? 'active' : ''%>>Home</a></li>
+                <li><a href="/events" class=<%= page === 'events' ? 'active' : ''%>>Events</a></li>
+                <li><a href="/forum" class=<%= page === 'forum' ? 'active' : ''%>>Forum</a></li>
+                <li><a href="/resources" class=<%= page === 'resources' ? 'active' : ''%>>Resources</a></li>
             </ul>
         </header>
-        <div id="main" class=<%=page%>>
+        <div id="main" class="<%=page%>">
 	

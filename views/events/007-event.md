@@ -21,6 +21,7 @@ Using the CreateJS Library, and working with the HTML 5 canvas
 
 TBA
 
+&nbsp;
 
 About the Speaker
 -----------------
@@ -32,11 +33,14 @@ TBA
 
 Automated garden management with Meteor and Raspberry Pi
 --------------------------------------------------------
-	
+
 A cool project connecting Meteor to Raspberry pi's to automate and update gardens in realtime.
 
-	
-About the Speaker
+&nbsp;
+
+&nbsp;
+
+About the Speakers
 -----------------
 
 TBA
@@ -44,13 +48,16 @@ TBA
 ![CasperJS](http://casperjs.org/images/casperjs-logo.png "CasperJS")
 ![CoffeeScript](/images/coffeescript-logo.png "CoffeeScript")
 
-
 It's a ghost town in there
 --------------------------
 
 CasperJS is a browser automation and testing framework built on top of phantomjs.
 
 Let's have a conversation about how and when we've used automated browser testing, and share lessons learned.
+
+&nbsp;
+
+&nbsp;
 
 About the Speaker
 -----------------
