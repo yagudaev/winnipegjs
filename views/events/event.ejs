@@ -8,9 +8,9 @@
 	<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @ <%= event.location.short %></time>
 	<% if(event.isUpcoming) { %>
 		<% if (event.hasOwnProperty('eventbrite')) { %>
-		<p>Please RSVP to the event using Eventbrite using this link: <a href="<%= event.eventbrite %>"><%= event.eventbrite %></a>.</p>
+		<p><a href="<%= event.eventbrite %>">Please RSVP to the event.</a></p>
 		<% } else { %>
-		<p style="font-style: italic">Eventbrite has not yet been set up. Keep an eye on your inbox for an invite to RSVP.</p>
+		<p style="font-style: italic">RSVPs are not open yet. Keep an eye on your inbox for an invite to RSVP.</p>
 		<% } %>
 	<% } %>
 
