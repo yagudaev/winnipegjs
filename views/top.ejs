@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><%=title%></title>
+	<title><%= title %>
+	<% if ('Winnipeg.js' !== title ) { %>| Winnipeg.js<% } %>
+	</title>
 
 	<!-- Viewport is used so mobile browsers scale by default correctly, set using Modernizer below -->
 	<% if (!toDesktop) { %>
