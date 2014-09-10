@@ -1,11 +1,11 @@
 ---
 date: "2012-11-21 18:00"
-eventbrite: "http://www.eventbrite.com/event/4841163049"
+rsvpLink: "http://www.eventbrite.com/event/4841163049"
 location: 
-  long: 
+  address: 
     - "1 Research Rd"
     - "Winnipeg, MB R3T 6E3"
-  short: "UofM SmartPark - 2nd floor"
+  name: "UofM SmartPark - 2nd floor"
 slug: nov-21-2012
 synopsis: 
   - "Phonegap is a platform that bridges the shortcomings of standard mobile web and native applications. It provides a standard API and tools to produce a compiled native application, while still using Javascript as our language of choice."

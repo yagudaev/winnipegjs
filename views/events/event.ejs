@@ -5,10 +5,13 @@
 <% include _google-map %>
 <div class="description">
 	<h1><%= event.title %></h1>
-	<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @ <%= event.location.short %></time>
+	<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @
+	<%= event.location.name %>
+	<%= event.location.instructions ? event.location.instructions : '' %>
+	</time>
 	<% if(event.isUpcoming) { %>
-		<% if (event.hasOwnProperty('eventbrite')) { %>
-		<p><a href="<%= event.eventbrite %>">Please RSVP to the event.</a></p>
+		<% if (event.hasOwnProperty('rsvpLink')) { %>
+		<p><a href="<%= event.rsvpLink %>">Please RSVP to the event.</a></p>
 		<% } else { %>
 		<p style="font-style: italic">RSVPs are not open yet. Keep an eye on your inbox for an invite to RSVP.</p>
 		<% } %>

@@ -1,11 +1,11 @@
 ---
 date: "2012-10-30 18:00"
-eventbrite: "http://www.eventbrite.com/event/4657304122"
+rsvpLink: "http://www.eventbrite.com/event/4657304122"
 location: 
-  long: 
+  address: 
     - "1 Research Rd"
     - "Winnipeg, MB R3T 6E3"
-  short: "UofM SmartPark - 2nd floor"
+  name: "UofM SmartPark - 2nd floor"
 slug: oct-30-2012
 synopsis: 
   - "Test Driven Development is software development methodology based on \"test first\" approach."

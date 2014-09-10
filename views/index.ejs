@@ -55,7 +55,10 @@
 		<div class="announcement">
 			<div>
 				<span>
-					<a href="/events/<%= upcomingEvent.slug %>">Next meetup: "<%= upcomingEvent.title %>" - <time datetime="<%= upcomingEvent.date %>"><%=: upcomingEvent.date | formatDate %> @ <%= upcomingEvent.location.short %></time></a>
+					<a href="/events/<%= upcomingEvent.slug %>">Next meetup: "<%= upcomingEvent.title %>" - <time datetime="<%= upcomingEvent.date %>"><%=: upcomingEvent.date | formatDate %> @
+					<%= upcomingEvent.location.name %>
+					<%= upcomingEvent.location.instructions ? upcomingEvent.location.instructions : '' %>
+					</time></a>
 				</span>
 			</div>
 		</div><!--announcement-->

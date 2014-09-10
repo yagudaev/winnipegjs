@@ -1,4 +1,4 @@
-<% var mapQuery = encodeURIComponent(event.location.long.join(', ')); %>
+<% var mapQuery = encodeURIComponent(event.location.address.join(', ')); %>
 <div class="map">
 	<iframe
 		width="425"
@@ -20,8 +20,8 @@
 		<b>Location:</b>
 		<div>
 			<a href="https://www.google.ca/maps/?q=<%= mapQuery %>">
-				<%= event.location.short %><br>
-				<%- event.location.long.join('<br>') %>
+				<%= event.location.name %><br>
+				<%- event.location.address.join('<br>') %>
 			</a>
 		</div>
 	</div>
