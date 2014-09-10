@@ -7,7 +7,12 @@
 <ul class="events-list">
 	<% for(var slug in events) { var event = events[slug]; %>
 	<li>
-		<h2><a href="/events/<%= event.slug %>"><%= event.title %></a></h2>
+		<h2>
+			<a href="/events/<%= event.slug %>"><%= event.title %></a>
+			<% if ( event.isUpcoming && event.hasOwnProperty('eventbrite')) { %>
+				<a class="button" href="<%= event.eventbrite %>">RSVP</a>
+			<% } %>
+		</h2>
 		<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @ <%= event.location.short %></time>
 		<a href="/events/<%= event.slug %>">
 			<img alt="<%= event.thumbAltText %>" src="<%= event.thumbnail %>">
