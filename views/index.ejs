@@ -5,7 +5,15 @@
 			<span class="tagline"> a Winnipeg JavaScript user group</span>
 		</div><!--logo-wrapper-->
 
-		<div class="divider"></div>
+		<% if (upcomingEvent != null) { %>
+			<div class="announcement">
+				<div>
+					<span>
+						<a href="/events/<%= upcomingEvent.slug %>">Next meetup: "<%= upcomingEvent.title %>" - <time datetime="<%= upcomingEvent.date %>"><%=: upcomingEvent.date | formatDate %> @ <%= upcomingEvent.location.short %></time></a>
+					</span>
+				</div>
+			</div><!--announcement-->
+		<% } %>
 
 		<div class="columns">
 			<div>
@@ -49,16 +57,5 @@
 				<!--End mc_embed_signup-->
 			</div>
 		</div><!--columns-->
-
-        <% if (upcomingEvent != null) { %>
-        <div class="divider"></div>
-		<div class="announcement">
-			<div>
-				<span>
-					<a href="/events/<%= upcomingEvent.slug %>">Next meetup: "<%= upcomingEvent.title %>" - <time datetime="<%= upcomingEvent.date %>"><%=: upcomingEvent.date | formatDate %> @ <%= upcomingEvent.location.short %></time></a>
-				</span>
-			</div>
-		</div><!--announcement-->
-        <% } %>
 
 <% include bottom %>
