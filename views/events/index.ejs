@@ -6,7 +6,7 @@
 
 <ul class="events-list">
 	<% for(var slug in events) { var event = events[slug]; %>
-	<li>
+	<li <% if (event.isUpcoming) { %>class="announcement"<% } %>>
 		<h2><a href="/events/<%= event.slug %>"><%= event.title %></a></h2>
 		<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @ <%= event.location.short %></time>
 		<a href="/events/<%= event.slug %>">
