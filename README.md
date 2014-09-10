@@ -13,9 +13,9 @@ Install
 Run
 ===
 
-Simply run as a normal express application by using `nodemon app.js`.
+Simply run as a normal node application by using `npm start`.
 
-Remember that Markdown views get cached on application startup, therefore you will need to restart the application when you make changes. `Nodemon` is designed to do it for you.
+Remember that Markdown views get cached on application startup, therefore you will need to restart the application when you make changes. `Nodemon` is designed to do it for you if you run `npm start`. Otherwise stop and start the server between changes to the .md files.
 
 Mobile Interfaces Supported
 ===========================
