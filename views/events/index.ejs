@@ -10,10 +10,10 @@
 		<h2>
 			<a href="/events/<%= event.slug %>"><%= event.title %></a>
 			<% if ( event.isUpcoming && event.hasOwnProperty('eventbrite')) { %>
-				<a class="button" href="<%= event.eventbrite %>">RSVP</a>
+            <a class="button" href="<%= event.eventbrite %>">RSVP</a>
 			<% } %>
 		</h2>
-		<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @ <%= event.location.short %></time>
+		<time datetime="<%= event.date %>"><%=: event.date | formatDate %> @ <%= event.location.name %></time>
 		<a href="/events/<%= event.slug %>">
 			<img alt="<%= event.thumbAltText %>" src="<%= event.thumbnail %>">
 		</a>
