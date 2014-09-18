@@ -45,8 +45,10 @@ exports.eventPage = function(req, res) {
 		var eventSlug = req.params.date,
 			event = eventData[eventSlug];
 
+		event.monthYear = moment(event.date).format( 'MMMM YYYY' );
 
-		res.render('events/event', { title: EVENT_PRE_TITLE + req.params.date, page: EVENT_PAGE_NAME, toDesktop: toDesktop(req), event: event });
+
+		res.render('events/event', { title: event.title + ' | ' + event.monthYear, page: EVENT_PAGE_NAME, toDesktop: toDesktop(req), event: event });
 	} else {
 		res.status(404).render('404', { title: 'Page not Found 404', page: '404', toDesktop: toDesktop(req)});
 	}
