@@ -7,7 +7,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "ejs": "0.8.x",
@@ -15,5 +15,8 @@
     "lodash": "2.4.1",
     "meta-marked": "0.3.1",
     "moment": "2.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.2.1"
   }
 }
