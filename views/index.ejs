@@ -12,8 +12,8 @@
                         <a href="/events/<%= upcomingEvent.slug %>">Next meetup: "<%= upcomingEvent.title %>" - <time datetime="<%= upcomingEvent.date %>"><%=: upcomingEvent.date | formatDate %> @ <%= upcomingEvent.location.name %></time></a>
                     </span>
 
-                    <% if (upcomingEvent.hasOwnProperty('eventbrite')) { %>
-                    <a class="button" href="<%= upcomingEvent.eventbrite %>">RSVP</a>
+                    <% if (upcomingEvent.hasOwnProperty('rsvpLink')) { %>
+                    <a class="button" href="<%= upcomingEvent.rsvpLink %>">RSVP</a>
                     <% } %>
                 </div>
 			</div><!--announcement-->
