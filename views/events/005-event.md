@@ -1,11 +1,12 @@
 ---
 date: "2014-05-12 19:00"
-eventbrite: "https://www.eventbrite.ca/e/a-new-vision-tickets-11522416859"
+rsvpLink: "https://www.eventbrite.ca/e/a-new-vision-tickets-11522416859"
 location: 
-  long: 
+  address: 
     - "355 Portage Ave"
     - "Winnipeg, MB R3B 2C3"
-  short: "Canadian Tire Data Centre (In the Air Canada Building Downtown)"
+  name: "Canadian Tire Data Centre"
+  instructions: "(In the Air Canada Building Downtown)"
 slug: may-12-2014
 synopsis: 
   - "Let's meetup again and bring this community back on track again. The JS related topic for this meetup is not yet determined and will be announced later but Adam Merrifield and Craig Haney from the Canadian Tire Innovations in Kitchener will talk about their vision for Winnipeg's developer community and Canadian Tire's new design studio."

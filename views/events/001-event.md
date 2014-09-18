@@ -1,11 +1,11 @@
 ---
 date: "2012-09-26 18:00"
-eventbrite: "http://www.eventbrite.com/event/4414239108?ref=elink"
+rsvpLink: "http://www.eventbrite.com/event/4414239108?ref=elink"
 location: 
-  long: 
+  address: 
     - "1 Research Rd"
     - "Winnipeg, MB R3T 6E3"
-  short: "UofM SmartPark - 2nd floor"
+  name: "UofM SmartPark - 2nd floor"
 slug: sep-26-2012
 synopsis: 
   - "We decided to do our first meeting about one of the hottest topics in the development world"

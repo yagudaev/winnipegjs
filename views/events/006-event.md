@@ -1,11 +1,11 @@
 ---
 date: "2014-06-18 17:30"
-eventbrite: "http://www.eventbrite.com/e/sixth-meetup-microsoft-3-javascript-intro-to-angular-and-breeze-tickets-11818823419"
+rsvpLink: "http://www.eventbrite.com/e/sixth-meetup-microsoft-3-javascript-intro-to-angular-and-breeze-tickets-11818823419"
 location: 
-  long: 
+  address: 
     - "374 Donald St"
     - "Winnipeg, MB R3B 2J2"
-  short: SkullSpace
+  name: SkullSpace
 slug: jun-18-2014
 synopsis: 
   - "This time we have two speakers: D'Arcy Lussier and Mike Sigsworth. At this event D'Arcy Lussier will tell us about Microsoft's new love for JavaScript and their support for open source JavaScript frameworks. Mike Sigsworth will show us how to develop applications using AngularJS, Breeze.js and Hot Towel."

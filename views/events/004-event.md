@@ -1,11 +1,11 @@
 ---
 date: "2013-02-20 18:00"
-eventbrite: "http://www.eventbrite.com/event/5515131908"
+rsvpLink: "http://www.eventbrite.com/event/5515131908"
 location: 
-  long: 
+  address: 
     - "1 Research Rd"
     - "Winnipeg, MB R3T 6E3"
-  short: "UofM SmartPark - 2nd floor"
+  name: "UofM SmartPark - 2nd floor"
 slug: feb-20-2013
 synopsis: 
   - "CoffeeScript is a small language that compiles to Javascript that aims to solve many of the short comings of javascript (the bad parts). It makes it easier to write less code that does more in a simple and elegant way."

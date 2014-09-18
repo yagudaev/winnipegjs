@@ -1,11 +1,12 @@
 ---
 date: 2014-09-22 18:00
-eventbrite: http://www.meetup.com/Winnipeg-js/events/203855332/
+rsvpLink: http://www.meetup.com/Winnipeg-js/events/203855332/
 location: 
-  long: 
+  address: 
     - "355 Portage Ave"
     - "Winnipeg, MB R3B 2C3"
-  short: "Canadian Tire Data Centre (In the Air Canada Building Downtown)"
+  name: "Canadian Tire Data Centre"
+  instructions: "(In the Air Canada Building Downtown)"
 slug: sep-2014
 synopsis: 
   - "Come join us for back to school action at the Canadian Tire Innovation Centre. We will try to have three shorter talks with pizza and networking breaks in between."
