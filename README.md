@@ -3,7 +3,7 @@ winnipegjs
 
 Winnipeg.js Community Website. Feel free to make pull requests we will be accepting changes that improve the site.
 
-Install
+First you Install
 =======
 
 1. Clone repo using `git clone git://github.com/yagudaev/winnipegjs.git`
